@@ -7,7 +7,7 @@ How to reach me : [EcoSensors](https://www.eco-sensors.ch)
 # List of materials
 This is a not-exhaustive list of my LoRaWAN structure and board elements
 
-## Gateway 1 (solar)
+## LoRaWAN Gateway 1 (solar)
 * TTIG [Read More](https://www.thethingsindustries.com/docs/gateways/thethingsindoorgateway/)
 * 3x60W second hand solar panel
 * MPTT Regulator (Victron MPTT 75 | 15)
@@ -15,16 +15,15 @@ This is a not-exhaustive list of my LoRaWAN structure and board elements
 * 4G/WiFi router (netgear)
 * Antenna SIRO GP 868 C
 
-
-## Gateway 2
+## LoRaWAN Gateway 2
 * TTOG [Read more](https://www.thethingsindustries.com/docs/gateways/thethingsoutdoor/)
 
-## Gateway 3
+## LoRaWAN Gateway 3
 * Rasoberry Pi3
 * IC880a Concentrator
 * Antenna: 824-896 MHz, 50Ohm, 2dBi, RF power handling: 50 W
 
-## Gateway 4
+## LoRaWAN Gateway 4
 [Read more](https://eco-sensors.ch/passerelle-lorawan-avec-deux-raspberry-pi3/)
 
 * Nebra IP67 weatherproof
@@ -41,7 +40,7 @@ This is a not-exhaustive list of my LoRaWAN structure and board elements
 * Glass fiber LoRa antenna
 
 
-## Meteo stations
+## LoRaWAN Meteo stations
 ### Main board
 * PCB Version: Eco-lora-v2.1
 * LoRaWAN Library: Arduino-lmic 4.1.1
@@ -83,7 +82,7 @@ This is a not-exhaustive list of my LoRaWAN structure and board elements
 * Pluviometer
 * Solar Panel: 5W
 
-## Irrigation stations (Smart Irrigation)
+## LoRaWAN Irrigation stations (Smart Irrigation)
 * PCB Version: fox-board_full_mcp-v3
 * LoRaWAN Library: Arduino-lmic 4.1.1
 * LoRaWAN Chip: RFM95, Band ISM, 868Mhz
@@ -119,7 +118,7 @@ This is a not-exhaustive list of my LoRaWAN structure and board elements
 ### Sensors
 * 3 WATERMARK tensiometric sensors
 
-## BUD Stations (Smart Bud)
+## LoRaWAN BUD Stations (Smart Bud)
 * PCB Version: Eco-lora-v2.1 (some station have the version Eco-lora-v2.0)
 * LoRaWAN Library: Arduino-lmic 4.1.1
 * LoRaWAN Chip: RFM95, Band ISM, 868Mhz
