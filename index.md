@@ -1,4 +1,4 @@
-# Comment ça fonctionne
+# Comment ça fonctioonnnnne
 ## Des stations
 ![IoT Station](doc/images/iot-comment-ca-fonctionne/station.png "IoT Station")
 Les stations (ou les nœuds) prennent les mesures à une séquence définie. Les données sont périodiquement envoyées à la passerelle. 
