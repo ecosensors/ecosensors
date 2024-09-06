@@ -120,6 +120,8 @@ Les pommiers sont arrosés tous les deux-trois jours grâce à système d’arro
 
 ## Preparation
 
+Dès 2022, je n’ai utilisé que deux sondes WATERMAK par station. Une sonde est plantée dans le sol à env. 30cm, au niveau des racines, et la deuxième est plantée dans le sous-sol à env 55cm de profondeur. Les deux sondes se trouvent approximativement dans le même axe, sous le goutteur. (Les photos, ci-dessous, on été prises en 2022)
+
 ![Preparation du matériel](Assets/images/i1.jpg "Preparation du matériel")
 
 *Préparation du matériel. Les sondes WATERMARK trempe déjà dans l’eau*
