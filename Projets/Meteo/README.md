@@ -66,3 +66,55 @@ L’anémomètre Davis (référence: 07911) est conçu pour mesurer à la fois l
         Précision: 2 mph (2 nœuds, 3 km / h, 1 m / s) ou ± 5%
 
 Coût: Sfr 210.–
+
+#### Baromètre
+
+Le BME280 est un capteur d’humidité spécialement développé pour les applications mobiles et les appareils portables où la taille et la faible consommation d’énergie sont des paramètres de conception clé. Le capteur d’humidité offre un temps de réponse extrêmement rapide et prend donc en charge les exigences de performance pour les applications émergentes telle que la connaissance du contexte et une précision élevée sur une large plage de températures.
+
+*Marque: Bosch, Modèle: BME280*
+
+![Baromètre](Assets/images/bme280-600x567.jpg "Baromètre")
+
+* Plages de fonctionnement
+	* Pression: 300…1100 hPa
+	* Température: -40…85°C
+* Interface : I2C
+* Humidité
+	* Temps de réponse: 1s
+	* Précision: ±3%
+
+Coût Sfr 30.–
+
+#### Pluviomètre
+La station est équipée d’un pluviomètre que va enregostrer les précipitations en mm (1mm = 1 l/m2), toutes les heures.
+
+Coût: Sfr 25.–
+
+#### Panneau solaire
+
+La station est encore équipée d’un petit panneau solaire de 5W pour maintenir la batterie chargée 24h/7.
+
+Coût: Sfr 15.–
+
+## Les stations sur le terrain
+
+Nous avions 3 stations sur le terrain
+
+### Station de Pessy (GE)
+
+Nous avons installé, début juillet 2021, notre première station météo dans un abri Stevenson, à Pessy (GE). Les stations météo de Dardagny et d’Avully seront prochainement protégées par un abri Stevenson.
+
+Cette station fait partie du projet SMART IRRIGATION
+
+Elle mesurait:
+
+* la radiation solaire grâce à un Pyranomètre de Davis Instrument
+* les précipitations grâce au pluviomètre installé sur l’abri
+* l’humidité, la pression et la température de l’air, grâce à un baromètre installé à l’intérieur de l’abri
+
+En plus de cela, un petit panneau solaire de 5W assure la charge de la batterie de 2200mA.
+
+ 
+### Station de Dardagny et Avully (GE)
+
+Tout comme la station de Pessy, ces deux stations mesurent en plus la vitesse et la direction du vent grâce à un anémomètre de Davis Instrument. Ces deux stations ne mesurent pas encore les précipitations et seront installées, tout prochainement, dans un abri Stevenson
