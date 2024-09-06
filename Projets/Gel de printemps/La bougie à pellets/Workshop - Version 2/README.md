@@ -1,4 +1,4 @@
-# La bougie à pellets – Version 1
+# La bougie à pellets – Version 2
 ![Version 2](Assets/images/bougie-a-pellers-v2.jpg "Version 2")
 
 Depuis le 9 octobre 2021, je teste un prototype de bougies à pellets pour lutter contre le gel de printemps.
@@ -210,9 +210,9 @@ Les bougies à pellets ont été allumées à 2h et elles ont réchauffé les zo
 
 ##### Résultats
 
-Visualiser toutes les mesures du 7-8 mars 2022, [ICI](https://bud.eco-sensors.ch/charts.php?field=3&date-from=2022-03-07&date-to=2022-03-08)!
+**Visualiser toutes les mesures** du 7-8 mars 2022, [ICI](https://bud.eco-sensors.ch/charts.php?field=3&date-from=2022-03-07&date-to=2022-03-08)!
 
-Température de référence (station météo ST42): -5°C/-6°C
+**Température de référence** (station météo ST42): -5°C/-6°C
 
 ![Fig. 19](Assets/images/A34-2022-3-7.png "Fig. 19")
 
@@ -230,4 +230,117 @@ Si vous souhaitiez visualiser et analyser par vous même les températures, les 
 
 Télécharger toutes les mesures en format A3 (pdf) [Page 1](Assets/pdf/graphique-7-3-2022_1.pdf) | [Page 2](Assets/pdf/graphique-7-3-2022_2.pdf)
 
+#### Mesures du 11-12 mars 2022
+Pour cette nuit, nous avons apporté des modifications.
 
+* Le palissage ayant été effectué, nous avons descendu toutes les sondes pour les fixer sur le premier fils porteur, au niveau du sol, à proximité des bourgeons.
+* Nous avons rabaissé les bougies à pellets pour que le 3/4 de sa hauteur, se trouve au niveau des rameaux.
+* On a ajouté des chapeaux aux bougies à pellets
+
+![Fig. 22](Assets/images/bougies-chapeau.jpg "Fig. 22")
+
+*Fig. 22*
+
+##### Résultats
+
+**Visualiser toutes les mesures** du 11-12 mars, [ICI](https://bud.eco-sensors.ch/charts.php?field=3&date-from=2022-03-11&date-to=2022-03-12)!
+
+**Température de référence** (station météo ST42): 5°C
+
+#### Mesures du 23-24 mars 2022
+Cette fois-ci, nous avons distancé les bougies de 4m (voir Fig.11) et nous avons déplacé les stations et les sondes. Les sondes sont toujours fixées sur le premier fils porteur, à proximité des rameaux et bourgeons. Les bougies à pellets ont toujours leurs chapeaux et sont toujours à la hauteur des bourgeons, comme pour l’allumage du 11 mars 2022.
+
+**Nous avons aussi remplacé une bougie à pellets par une bougie en paraffine** afin de comparer le dégagement de chaleur de ces deux bougies,  La bougie à pellets est « encadrée » par les sondes B1 et B2 de la station B12. La bougie en paraffine est « encadrée » par la sonde C5 de la station C56 et la sonde A1 de la station A12.
+
+Les stations ne sont plus positionnées par rapport à leur colonne (A34 pour colonne A, B12 pour colonne B)
+
+##### Résultats
+**Visualiser toutes les mesures** du 23-24 février 2022, [ICI](https://bud.eco-sensors.ch/charts.php?field=3&date-from=2022-03-23&date-to=2022-03-24)!
+
+**Température de référence** (station météo ST42): -1°C/-2°C
+
+Les bougies à pellets et la bougie en paraffine ont été allumées à 2h du matin. A 7h du matin, un de nous est passé pour constater qu’elles étaient toujours allumée mais sans flammes, tout comme la bougie en paraffine.
+
+![Fig. 23](Assets/images/bougie-24-3-2022-fumee.jpg "Fig. 23")
+
+*Fig. 23 Etat des bougies à pellets à 7h du matin*
+
+Un des premier constat, la bougie en paraffine dégage un peu plus de chaleur que la bougie à pellets mais elle ne produit pas de fumée. Plus tard, nous avons constaté que des bourgeons avaient été légèrement brûlés par la bougie en paraffine.
+
+![Fig. 24](Assets/images/B12-C56-23-3-2022.png "Fig. 24")
+
+*Fig. 24 B12 mesure la bougie à pellets, C56 mesure la bougie en paraffine. Sur la B12, on voit une augmentation de température à 8°C à 8h43. C’est augmentation n’est pas causé par la bougie à pellet, mais par la température de l’air, suite à la levé du soleil (début de journée)*
+
+#### Mesures du 3 avril 2022
+
+La vigne, où nous effectuons ces exercices, (voir Fig. 5) a une rangé qui a été enlevée. C’est la raison pour laquelle, les rangées sont espacées de 1.1m et 2.2m.
+
+Lors du précédent allumage, nous avons constaté que la chaleur ne se dissipait pas assez (voir Fig. 5) pour réchauffer la rangée manquante. Nous avons voulu considérer cette rangée manquante, comme si nous effectuons cet exercice dans une autre vigne. Dans ce scénario, nous avons repositionné et rapproché les bougies dans l’axe horizontal, de manière à ce qu’il y ait des bougies, **une rangée sur trois** (voir Fig. 12). En revanche, nous avons conservé la distance de 4m entre les bougies, dans l’axe vertical. Aussi, comme vous pouvez le constater sur la schéma (Fig. 12), **nous avons décalé de 2m vers le haut, les bougies de la rangée du milieu**, de manière à ce qu’elles ne soient plus dans le même axe horizontal que les bougies se trouvant dans les rangées 1 et 3.
+
+![Fig. 12](Assets/images/bougies-position-3.jpg "Fig. 12")
+
+*Fig. 12 Position des bougies à pellets intercalées*
+
+**Note**: La station A12 n’a malheureusement jamais fonctionné plus de 3h et je n’avais malheureusement plus de station pour la remplacer. J’ai donc décidé de l’utiliser comme-même, malgré le fait qu’elle n’a pas retourné des mesures pendant les périodes intéressantes.
+
+##### Résultats
+**Visualiser toutes les mesures** du 3 avril 2022, [ICI](https://bud.eco-sensors.ch/charts.php?field=3&date-from=2022-04-03&date-to=2022-04-04)!
+
+**Température de référence** (station météo ST42): 1°C
+
+Notez que dans les courbes, ci-dessous, on observe que la fin des courbes montent jusqu’à 10°C. Ceci est causé par le début de la journée.
+
+Extrémités (A34 et D12)
+
+![Centre (B12 B34 et C12)](Assets/images/extreemitees-A34-D12.png "Centre (B12 B34 et C12)")
+
+*Centre (B12 B34 et C12)*
+
+![Mesures au cente](Assets/images/centre-B12-B34-C12.png "Mesures au cente")
+
+*Mesures au cente*
+
+### Conclusion
+
+Lors du premier allumage, les bougies à pellets ont été allumées à 22h30 et elles ont réchauffé les zones jusqu’à 6h30 du matin, **soit pendant 8 heures**. Pour les allumages suivants, la durée n’a pas pu être testée puisque les bougies ont été allumée à 2h et la chaleur de la matinée a pris le dessus, avant même que les bougies à pellets soient éteintes.
+
+#### Chaleur des bougies à pellets
+En général, les bougies à pellets ont réchauffé les zones de +4°C à +°6C, par rapport à la température de référence. Les bourgeons restent probablement exposés à un risque, si la température de l’air devait descendre en dessous de -6°C. Je n’ai pas les compétences pour dire si la fumée dégagée par les bougie à pellets (voir Fig. 23) pourrait sauver les bourgeons, au lever du soleil.
+
+#### Qualité du pellet
+Un des premier constat est la qualité du pellet. Lors du deuxième allumage, nous avons utilisé un autre pellet qui s’est avéré de moins bonne qualité, puisque les bougies se sont éteintes après 5h seulement!
+
+#### Le vent
+Une autre chose intéressante, le vent. Lors de ma précédente expérience, dans une vigne à Dardagny (voir ci-dessous, sous la section « Workshop précédent avec 1 et 3 bougies à pellets », les bougies de Dardagny étaient plus exposées au vent, alors qu’a la Plaine, les bougies se trouvaient dans un creux protégées par la vigne (en pente) et les arbres des alentours. A la Plaine, j’ai constaté que des résidus restaient sur le pellet qui n’était pas encore consommé, ce qui avait pour conséquence d’ « étouffer » la flamme, sans pour autant éteindre le pellet. Par moment, nous pensions que la bougie était éteinte alors qu’elle continuait à diffuser de la chaleur grâce aux braises. Aussi, le lendemain, quand les bougies étaient éteintes, Il n’y avait aucun reste dans les bougies situées à Dardagny, alors qu’il en restait dans celles de la Plaine. On sait qu’en cas d’incendie, il faut fermer les fenêtres du bâtiment sinistré. Par conséquent, je pense qu’un petit « courant d’air » pourrait favoriser le réchauffement d’une zone grâce à une meilleur flamme
+
+#### La bougie en paraffine vs la bougie à pellets
+On a constaté que la bougie en paraffine dure moins longtemps que la bougie à pellets. La bougie en paraffine chauffe plus que la bougie à pellets et on a vu, durant l’allumage du 23-24 mars 2022, que des bougeons avaient légèrement noirci à cause de la bougie en paraffine. Contrairement à la bougie en paraffine, la bougie à pellets dégage de la fumée (voir Fig 23), ce qui est très intéressant.
+
+
+
+La pratique de l’enfumage n’est pas récente. Bougies ou paille mouillée, le but est de faire un maximum de fumée au lever du soleil. Cette technique de l’enfumage permet de créer un nuage artificiel pour protéger les bourgeons des basses températures et empêcher les rayons du soleil de les brûler.
+
+
+
+Le 13 avril 2022, nous nous sommes rencontrer (Patrick, Ellinor et moi-même) pour discuter de l’allumage du 3 avril 2022 et nous avons conclu que cette configuration était la meilleur (Fig. 12).
+
+Je vais retravailler le plan de la bougie à pellets de manière à ce qu’elle ne soit plus démontable, mais empilable, pour gagner sur le coût de production. Nous avons aussi utilisé une bougie ronde qui est très intéressante en terme de fabrication.
+
+### Remerciement
+
+Avant tout, j’aimerais, en premier, remercier les donateurs qui ont permis de financer une très grande partie de ce projet, à travers le crowdfunding.
+
+J’aimerais aussi beaucoup remercier Patrick et Alain Duverney, viticulteurs et Ellinor Sekund, conseillère viticole chez AgriGenève.
+
+Patrick s’est beaucoup investi dans ce workshop. D’une part, en fournissant la parcelle où les bougies à pellets ont été installées et en partageant son expertise et son regard. C’est entre autre lui, qui s’est porté volontaire pour allumer les bougies à pellets au milieu de la nuit :).
+
+J’aimerais aussi remercier Ellinor, qui a suivi ce projet et s’est rendue à plusieurs reprises sur la parcelle. Son avis a permis d’apporter un équilibre et ses conseils ont eu une grande influence sur les différents allumages, les positions des sondes et des bougies.
+
+J’ai eu beaucoup de plaisir à travailler avec eux, ce qui a été une expérience très enrichissante. Je les remercie encore pour leur collaboration.
+
+### Photos
+
+
+![Station LoRaWAN avec deux sondes de température](Assets/images/photos/c-600x450.jpg "Station LoRaWAN avec deux sondes de température")
+
+*Station LoRaWAN avec deux sondes de température*
