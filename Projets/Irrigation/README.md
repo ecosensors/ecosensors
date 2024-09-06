@@ -57,7 +57,7 @@ L’utilisation de ces technologies tel que l’Internet des objets (IoT) dans l
 
 C’est pourquoi, l’objectif fixé de cet projet est de développer, tester et de mettre en pratique, une solution IoT de gestion de l’irrigation des cultures, à bas coût.
 
-	Jusqu’à 3 à 10 km de couverture et une très faible consommation
+> Jusqu’à 3 à 10 km de couverture et une très faible consommation
 
 Pour arriver à ces résultats, j’utilise une technologie promettante: LoRaWAN. Cette technologie est particulièrement intéressante car elle permet de transmettre des donnée par radio, dans un rayon de 3 à 10 kilomètres (en fonction de la configuration du terrain), à bas débit et surtout à une très faible consommation.
 
@@ -79,7 +79,7 @@ La passerelle, quant à elle, est autonome puisqu’elle est alimenté par une b
 
 Ainsi, il sera plus facile de choisir le bon moment pour irriguer vos sols, et de bien quantifier le besoin en eau.
 
-** Perfectionnements apportés durant l’hiver 2019
+## Perfectionnements apportés durant l’hiver 2019
 
 Les circuits électroniques en place actuellement doivent être remplacés par un nouveau modèle amélioré, dont les modifications suivants ont été apportées:
 
@@ -110,11 +110,68 @@ Les deux stations se trouvent au deux extrémités du verger. L’une au point l
 * la pression atmosphérique
 * l’état de la batterie
 
-	Une sonde tensiométrique ne mesure pas l’humidité du sol mais la force de liaison entre l’eau avec le sol (exprimé en tension), autrement dit, la force de succion que la racine doit exercer pour extraire l’eau du sol
+> Une sonde tensiométrique ne mesure pas l’humidité du sol mais la force de liaison entre l’eau avec le sol (exprimé en tension), autrement dit, la force de succion que la racine doit exercer pour extraire l’eau du sol
 
 Toutes les heures, elles envoient les 10 mesures cités haut-dessus, à la passerelle qui elle se trouve à 1 kilomètre de la première station.
 
 Les stations sont alimentées par une batterie au lithium de 3.7V/1000mA. Cette dernière est connectée à un petit panneau solaire de 3W qui suffit largement pour maintenir une tension de 4 à 4.3V sur 24h. A savoir qu’une batterie au lithium a une plage de fonctionnalité entre 3.6V et 4.3V. C’est à dire qu’en dessous de 3.6V, elle ne suffit plus pour alimenter une charge alors qu’à 4.3V, elle est entièrement chargée. Ce qui nous donne une marge dans le cas où des journées non ensoleillées devaient se suivent.
 
 Les pommiers sont arrosés tous les deux-trois jours grâce à système d’arrosage goutte-à-goutte. En moyenne, 10 litres d’eau est versés par goutteur. Fin juillet, j’ai installé un pluviomètre sous le goutteur afin de compter le nombre de gouttes par heure.
+
+## Watermark Digital Reader
+
+![Watermark Digital Reader](Assets/images/watermark-reader.jpg "Watermark Digital Reader")
+
+*Watermark Digital Reader*
+
+Afin de vérifier mes mesures, J’ai acquis un lecteur digital (Watermark Digital Reader) avec lequel j’ai pu comparé la tension de l’eau du sol, (autrement dit, la force de succion que la racine doit exercer pour extraire l’eau du sol) mesurées par mes deux stations. J’ai eu l’agréable surprise de constater qu’une différence de 2 à 7 kpa par sonde, c’est qui est très bien.
+
+## Evolution
+### 2018
+En premier temps, j’avais positionné les sondes Watermark à 30cm, 35cm et 50cm de profondeur. Puis j’ai voulu essayer de mesurer la bulbe d’eau. J’ai donc repositionné la première sonde à 15cm du goutteur et à une profondeur de 30cm. La deuxième à 15cm et 30cm de profondeur, et la dernière à 15cm et 60cm de profondeur du point de chute des gouttes. Cependant, j’avais mal évalué ce point de chute et la bulbe d’eau se formait légèrement à côté des sondes.
+
+![Station 1](Assets/images/watermark-bulbe-st1.jpg "Station 1")
+
+*Mauvais positionnement des sondes pour mesurer la bulbe d’eau*
+
+Afin de mieux mesurer cette bulbe d’eau formée par le goutteur, j’ai simulé l’eau versé par le goutteur avec une jerrican d’eau de 10litres en dosant le débit, de manière à ce que les gouttes tombent à côté de la sonde positionnée à 15cm/30cm. Dès ce moment, cette sonde à vite réagit mais pas celle plantée à 60cm de profondeur. Ce qui laisse à croire que la bulbe se forme env. entre 15 et 50cm de profondeur.
+
+![Station 1](Assets/images/watermark-bulbe-st1-19-9-18.jpg "Station 1")
+
+*Représentation de la chute des gouttes versées par la jerrican*
+
+’ai aussi constaté que mon code qui calcule l’état hydrique du sol (en kpa) avait une erreur. Même si les courbes du graphique réagissaient, elles évoluaient en forme d’escalier. Aussi, il n’y avait aucunes mesures entre 100 et 199kpa. Pour comprendre l’erreur, j’ai utilisé l’équation de Koch (courbe jaune) pour calculé le tension grâce au la résistance électrique (courbe rouge) des sondes Watermark et je l’ai comparé le résultat avec ma fonction erronée (courbe violette).
+
+![Station 3](Assets/images/courbe-correction-2018.png "Station 3")
+
+*Correction des courbes*
+
+On voit que le 16 septembre, j’ai corrigé ma fonction et la courbe violette évolue similairement avec la courbe jaune.
+
+Aussi, à la station 2, le 21 septembre, j’ai replanté les trois sondes Watermark différemment.
+
+* Sonde 1: à 1m du goutteur et à une profondeur de 30cm. Elle se trouve aussi à quelques centimètre du goutteur suivant
+* Sonde 2: au point de chute (env 1-5cm) des gouttes du goutteur et à une profondeur de 30cm
+* Sonde 3: à 10cm du point de chute et à une profondeur de 50cm
+
+Ainsi, je peux continué à mesurer la bulbe d’eau avec la station 1, et comparer les mesures avec un positionnement différent, des sondes à la station 2, qui n’a pas pour but « d’observer » la bulbe d’eau, mais de mesurer l’état hydrique sur une longueur de 1m, entre deux goutteurs.
+
+### 2019
+En 2019, j’ai repositionné les sondes:
+
+Station 1: Les sondes sont à 30cm de profond-eur et distancée de 1m
+Station 2 et station 3: Une station ne permet d’avoir que 3 sondes tensionétriques. Afin de mieux mesurer la formation du bulbe d’eau, j’ai ajouté une nouvelle station (station 3), juste à côté de la station 2, pour avoir 6 sondes tensionétriques autour du point de chute du goutteur.
+
+* La sonde 1 est à 30cm de profondeur et à 30cm du point de chute (est)
+* La sonde 2 est à 30cm de profondeur et à 1cm du point de chute (surface).
+* La sonde 3 est à 50m de profondeur et à env 10cm du point de chute (pro- fondeur).
+* Les autres sondes tensiométriques sont connectées à la station 3. Elles sont toutes à 30cm de profondeur et à 30cm du point de chute (nord, ouest, sud)
+
+> Seuil: 0-10 cbars (ou kPa): Soil saturé. 10-30 cbars: Le sol est suffisamment humide (sauf pour sables grossiers qui commencent à perdre de l’eau) 30-60 cbars: Gamme habituelle d’irrigation (sauf les sols argileux lourds) 60-100 cbars: Gamme habituelle pour l’irrigation dans les sols argileux lourds 100-200 cbars: Le sol devient dangereusement sec.
+
+
+
+
+
+
 
