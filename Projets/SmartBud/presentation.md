@@ -4,7 +4,7 @@
 
 L’objectif de ce projet est de surveiller la température des bourgeons qui émergent, lors du gel de printemps, pour permettre aux exploitants d’être alarmés immédiatement et de prendre les mesures nécessaires pour protéger leurs récoltes. «En 2017, plus de 550 hectares ont été fortement endommagés entre Sion et Martigny.» 
 
-[Présentation de SMART BUD sur Rouge FM, le 18 mars 2021](https://youtu.be/-9DW8gAQh1I){:target="_blank"}
+[Présentation de SMART BUD sur Rouge FM, le 18 mars 2021](https://youtu.be/-9DW8gAQh1I){target="_blank"}
 
 Presses: [Vignes et Vergers N1](https://www.revuevitiarbohorti.ch/archives/?id_heft=134&jahr_heft=2022){:target="_blank"} et [AGRI Hebdo](https://www.facebook.com/ecosensors/photos/a.106412497776585/241220640962436/){:target="_blank"}
 
