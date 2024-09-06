@@ -13,7 +13,7 @@ Les stations prennent la température des bourgeons à une séquence définie ai
 
 ### Des mesures au plus proche des bourgeons
 
-![Sondes Température waterproof](../../Assets/images/smartbud/ds18b20.png "sonde température waterproof")
+![Sondes Température waterproof](Assets/images/smartbud/ds18b20.png "sonde température waterproof")
 
 Deux sondes de température placées à 1cm des bourgeons,
 Détection du gel par rayonnement,
@@ -23,7 +23,7 @@ Un baromètre pour mesurer la pression et la température de l’air ambiant,
 Une infrastructure pour couvrir jusqu’à 5 kilomètres de rayon à surveiller.
 
 ### Un outil, des bénéfices
-![Anenomètre](../../Assets/images/smartbud/anenometer.png "Anenomètre")
+![Anenomètre](Assets/images/smartbud/anenometer.png "Anenomètre")
 
 Mesure et visualisation en temps réel,
 Simplification de la collecte et de l’interprétation des données,
@@ -41,4 +41,4 @@ Augmentation du rendement.
 * [Les arbres fruitiers en danger en raison du gel et de la neige dès lundi](https://www.lematin.ch/story/les-arbres-fruitiers-en-danger-en-raison-du-gel-et-de-la-neige-des-lundi-210628593769), Le Matin (4.4.2021) 
 * Coup de projecteur sur Rouge FM Rouge FM, Rouge FM (18.23.2021)
 * [Une solution innovente testée cette année en terre genevoise](https://www.facebook.com/ecosensors/posts/241220684295765){:target="_blank"}, Agri Hebdo (12.2.2021) 
-* [Lutte contre le gel](assets/pdf/lutte-contre-le-gel.pdf), Bureau interprofesionnel des vins de Bourgogne
+* [Lutte contre le gel](Assets/pdf/lutte-contre-le-gel.pdf), Bureau interprofesionnel des vins de Bourgogne
