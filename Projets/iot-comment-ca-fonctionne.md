@@ -7,7 +7,7 @@ Les stations (ou les nœuds) prennent les mesures à une séquence définie. Les
 
 ## Une passerelle
 
-![LoRaWAN Gateway](../ssets/images/iot-comment-ca-fonctionne/gateway.png "LoRaWAN Gateway")
+![LoRaWAN Gateway](../Assets/images/iot-comment-ca-fonctionne/gateway.png "LoRaWAN Gateway")
 
 La passerelle (Gateway en anglais) est l’élément qui se trouve sur le terrain et collectera les données de toutes les stations qui se trouvent dans le périmètre de couverture de la passerelle. En fonction de la configuration du terrain, elle peut couvrir un rayon allant jusqu'à 12km, voir plus.
 
