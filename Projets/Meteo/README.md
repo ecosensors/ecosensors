@@ -32,6 +32,7 @@ Le pyranomètre vous permettra de mesurer le rayonnement solaire
 *Marque : Davis Instrument, Réf: 6450*
 
 ![Pyranometer](Assets/images/pyranometer.jpg "Pyranomètre")
+
 *Un pyranomètre de Davis Instrument*
 
 Un pyranomètre mesure le rayonnement solaire en W/m2.
@@ -52,15 +53,16 @@ L’anémomètre Davis (référence: 07911) est conçu pour mesurer à la fois l
 *Marque: Davis Instrument, réf: 6410*
 
 ![Anemometer](Assets/images/anemometer.jpg "Anemometer")
+
 *Anémomètre pour mesurer la direction et la vitesse du vent*
 
 
 * Plages de température: 40° to +149°F (-40° to +65°C
 * Wind Direction
-* * Display Resolution: 16 points (22.5°) on compass rose, 1° in numeric display, Précision: ±5°
+	* Display Resolution: 16 points (22.5°) on compass rose, 1° in numeric display, Précision: ±5°
 * Wind Speed
-* * Résolution et unités :mesuré en 1 mph. Les autres unités sont converties de mph et arrondies à 1 km / h, 0,1 m / s ou 1 nœud le plus proche
-        Plage de mesures : 1 to 200 mph, 1 to 173 knots, 0.5 to 89 m/s, 1 to 322 km/h
+	* Résolution et unités :mesuré en 1 mph. Les autres unités sont converties de mph et arrondies à 1 km / h; 0,1 m / s ou 1 nœud le plus proche;
+        Plage de mesures : 1 to 200 mph, 1 to 173 knots, 0.5 to 89 m/s, 1 to 322 km/h;
         Précision: 2 mph (2 nœuds, 3 km / h, 1 m / s) ou ± 5%
 
 Coût: Sfr 210.–
