@@ -159,6 +159,6 @@ Si vous souhaitiez visualiser et analyser par vous même les températures, les 
 
 *Fig. 15 D12 25-2-2022*
 
-Télécharger toutes les mesures en format A3 (pdf) [Page 1]() | [Page 2]()
+Télécharger toutes les mesures en format A3 (pdf) [Page 1](Assets/pdf/bougies-graphique-25-2-2022_1.pdf) | [Page 2](Assets/pdf/bougies-graphique-25-2-2022_2.pdf)
 
 
