@@ -169,6 +169,64 @@ Station 2 et station 3: Une station ne permet d’avoir que 3 sondes tensionétr
 
 > Seuil: 0-10 cbars (ou kPa): Soil saturé. 10-30 cbars: Le sol est suffisamment humide (sauf pour sables grossiers qui commencent à perdre de l’eau) 30-60 cbars: Gamme habituelle d’irrigation (sauf les sols argileux lourds) 60-100 cbars: Gamme habituelle pour l’irrigation dans les sols argileux lourds 100-200 cbars: Le sol devient dangereusement sec.
 
+#### Analyse de la Station 1, du 20 juin au 19 juillet 2019
+
+![Station 1](Assets/images/measure-june-july-2019-st1-a4.png "Station 1")
+
+*Station 1 - Mesures du 20 juin au 19 juillet 2019*
+
+Toutes les sondes sont sous un goutteur, à l’exception de la sonde rouge qui est légèrement décalée du point de chute des gouttes. Pour la sonde jaune, j’ai ajouté un conduit pour que les gouttes tombent bien au niveau de la sonde.On constate que la sonde rouge est généralement toujours sèche, Du moins, le sol devient très vite sec, La sonde jaune a tendance à sécher plus rapidement que la sonde verte.Pour la sonde rouge, on peut comprendre que le bulbe d’eau se forme à sa proximité et qu’elle est légèrement humidifiée par le bulbe. Ce qui expliquerait qu’elle sèche rapidement. Ceci probablement parce qu’elle ne se trouve pas exactement sous le point de chute des gouttes.On peut aussi en déduire que le bulbe d’eau reste à env 20-30cm de profondeur et ne doit pas avoir une largeur de plus de 20cm (suggetsion), ou alors son développe-ment se forme dans une direction opposée à la position de la sonde.Pour la sonde jaune et la sonde verte, on voit que le sol est saturé pendant quelques heures. La sonde jaune sèche plus vite que la verte ce qui peut se comprendre par le fait qu’elle soit moins humitifée par le bulbe d’eau formé par le goutteur 2.
+
+#### Analyse des mesures des stations 2 & 3 – Formation du bulbe d’eau
+##### Analyse (1) du 22 au 25 juillet 2019
+
+![Station 2](Assets/images/station2-22-22-juillet-2019.png "Station 2")
+
+*Station 2 – Mesures du 22 au 25 juillet 2019*
+
+![Station 3](Assets/images/station2-22-22-juillet-2019.png "Station 3")
+
+*Station 3 – Mesures du 20 au 25 juillet 2019*
+
+##### Analyse (2) du 13 au 25 août 2019
+
+![Station 2](Assets/images/station2-13-25-aout-2019.png "Station 2")
+
+*Station 2 – Mesures du 13 au 25 août 2019*
+
+![Station 3](Assets/images/station3-13-25-aout-2019.png "Station 3")
+
+*Station 3 – Mesures du 13 au 25 août 2019*
+
+Le premier point intéressant à constater est la sonde de profondeur et la sonde Est. On peut déduire que lors de l’analyse (1) et (2), le bulbe d’eau ne s’est pas formé jusqu’à ce deux sondes. Le teneur hydrique a été très faible à ces niveaux.La sonde de surface a été la plus réactive lors des arrosages. On peut même constater que lors des fortes pluies (40ml) du 18 au 20 août, toutes les courbes ont réagi. En revanche, il y a une période floue, entre le 22 et 23 juillet (analyse (1)), où la courbe de jaune n’a pas réagi aux arrosages alors que la sonde Ouest a réagi lors de chaque arrosage. C’est un comportement étrange alors que la sonde de surface est la plus proche du point de chute des gouttes. Il se peut que le bulbe n’est pas descendu jusqu’à la sonde de surface mais s’est déplacé rapidement en direction de la soude Ouest.La sonde Nord est relative stable également. Ce qui est intéressant de constater, c’est que lors de tous les arrosages, le bulbe d’eau ne s’est jamais formé jusqu’aux sondes externes (orange, bleu ciel et bleu foncé, violet) alors qu’une forte pluie (qui couvre une plus grande surface du sol) les font toutes réagir, sauf la sonde de profondeur et la sonde Nord (qui se trouve proche du poteau).On constate encore une fois, que la bulbe d’eau ne se forme jamais jusqu’à 60cm de profondeur, et ne doit pas faire plus de 20cm de large.
+
+### 2022
+Je viens d’installer, un peu tardivement, 2 stations LoRaWAN avec deux sondes WATERMARK dans le même verger.
+
+Cette année, je n’utiliserai que deux sondes WATERMAK par station. Une sonde est plantée dans le sol à env. 30cm, au niveau des racines, et la deuxième est plantée dans le sous-sol à env 55cm de profondeur. Les deux sondes se trouvent approximativement dans le même axe, sous le goutteur.
+
+![Preparation du matériel](Assets/images/i1.jpg "Preparation du matériel")
+
+*Préparation du matériel. Les sondes WATERMARK trempe déjà dans l’eau*
+
+Pour commencer, avec un tarière de 20cm, j’ai creusé un trou de 60cm de profondeur.
+
+![Preparation du matériel](Assets/images/i6.jpg "Preparation du matériel")
+
+Au fur et à mesure que je creusais, je mettais la terre récupérée dans mon seau d’eau, où trempaient déjà me deux sondes WATERMARK
+
+![Preparation du matériel](Assets/images/i5-1.jpg  "Preparation du matériel")
+
+Une fois le trou creusé, j’ai mis un couche de boue venant du seau, puis la première sonde WATERMARK, à env 55cm.
+
+Je me suis assuré de bien recouvrir la sonde (partie cylindrique perforée) de boue, en refermant le trou avec la terre, jusqu’à 35cm du sol.
+
+![Preparation du matériel](Assets/images/i8.jpg  "Preparation du matériel")
+
+Puis, j’ai encore ajouté une couche de boue avant de positionner la deuxième sonde à 30cm du sol. J’ai encore ajouté une sonde étanche de température au niveau de cette sonde, pour connaître la température du sol, au moment de la prise des mesures. Là encore, j’ai continué à refermer le trou avec de la boue venant du seau, de manière à ce que la sonde (le tube cylindrique perforé) soit bien recouverte de boue.
+
+J’ai finalement refermé compétemment le trou avec la terre restante. Il faudra encore attendre quelques jours pour que la boue et la terre qui recouvrent les sondes sèchent pour se trouver en équilibre avec le sol, tel que ce l’était avent de creuser ce trou.
+
 
 
 
