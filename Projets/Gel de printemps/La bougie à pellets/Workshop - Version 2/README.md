@@ -161,4 +161,73 @@ Si vous souhaitiez visualiser et analyser par vous même les températures, les 
 
 Télécharger toutes les mesures en format A3 (pdf) [Page 1](Assets/pdf/bougies-graphique-25-2-2022_1.pdf) | [Page 2](Assets/pdf/bougies-graphique-25-2-2022_2.pdf)
 
+#### Mesures du 28 février-1 mars 2022
+Avant de remplacer le baromètre de la station météo, j’ai profité d’imprimer (3D) un nouveau boîtier pour le circuit imprimé et surtout des coupoles pour mieux protéger le baromètre (voir fig. 9).
+
+Cette fois-ci, les bougies à pellets ont été allumées à 1h30 et nous avons utilisé un autre pellet qui s’est avéré de moins bonne qualité. De ce fait, Les bougies à pellets ont fourni de la chaleur pendant un peu plus de 4h.
+
+##### Résultats
+
+Visualiser toutes les mesures du 28 février au 1er mars 2022, [ICI](https://bud.eco-sensors.ch/charts.php?field=3&date-from=2022-02-28&date-to=2022-03-01)!
+
+
+Pour rappel
+* les stations Axx se trouvent à l’extérieur gauche.
+* Les stations Dxx se trouvent à l’extérieur droit. Les stations Bxx et Dxx se trouvent à l’intérieur.
+* La station B34 se trouve le plus au centre.
+* Les stations A12, B12, C12 et D12 se trouvent à l’extérieur bas.
+* Les stations A56 et C56 se trouvent à l’extérieur haut (voir Fig. 10).
+
+**Température de référence** (station météo ST42): -3°C/-4°C
+
+On voit que certaines stations mesurent déjà une température de -4°C à 6h ce qui s’explique par la mauvaise qualité des pellets utilisés cette fois-ci. L’un d’entre nous était bien sur le terrain vers 7h, pour constater que les bougies à pellets étaient bien éteintes.
+
+Même si les températures des stations **extérieures** (voir Fig. 10) sont généralement restées en dessous de 0°C, on observe comme-même que la zone extérieure gauche chauffée par les bougies à pellets, a augmenté de -4°C à (en moyenne) -1°C., à l’exception de la sonde B5, qui se trouve elle, dans le coin haut/gauche, soit la zone la plus exposée au froid.
+
+![Fig. 16](Assets/images/A34-28-2-2022.png "Fig. 16")
+
+*Fig. 16 Mesures des sondes attachées aux stations A34 et A56*
+
+Des mesures similaires sont aussi observées aux stations B12 et C12.
+
+En revanche, les stations au centre du quadrillage affichent des mesures plus intéressantes, ce qui peut s’expliquer par le fait qu’elles sont entourées d’autres bougies, même si les sondes BC2-3 affichent des mesures proches de la température de référence (-3°C/-4°C). Les sondes BC2-3 et BC3-4 se trouvent entre les rangées B et C.
+
+![Fig. 17](Assets/images/B34-C34-28-2-2022.png "Fig. 17")
+
+*Fig. 17 Températures des sondes attachées aux stations B34 et C34*
+
+Si vous souhaitiez visualiser et analyser par vous même les températures, les mesures sont accessible, [ICI](https://bud.eco-sensors.ch/charts.php?field=3&date-from=2022-02-28&date-to=2022-03-01)!
+
+#### Mesures du 7-8 mars 2022
+
+Pour cette exercice, nous avons surélevé les bougies de 50cm, mais ceci s’est avéré inutile. En revanche, nous avons eu une nuit particulièrement froide: -6°C de 5h à 8h.
+
+Les bougies à pellets ont été allumées à 2h et elles ont réchauffé les zones jusqu’à 8h. Selon la station météo, l’air ambiante est rapidement monté jusqu’à 1°C à 9h10 puis 5°C à 9h55
+
+![Fig. 18](Assets/images/st42-2022-3-7.png "Fig. 18")
+
+*Fig. 18 Station météo*
+
+##### Résultats
+
+Visualiser toutes les mesures du 7-8 mars 2022, [ICI](https://bud.eco-sensors.ch/charts.php?field=3&date-from=2022-03-07&date-to=2022-03-08)!
+
+Température de référence (station météo ST42): -5°C/-6°C
+
+![Fig. 19](Assets/images/A34-2022-3-7.png "Fig. 19")
+
+*Fig. 19 Stations sur la rangée A (rangée extérieure gauche)*
+
+![Fig. 20](Assets/images/C34-7-3-2022.png "Fig. 20")
+
+*Fig. 20 Stations sur l’une des rangée centrale*
+
+![Fig. 21](Assets/images/D34-7-3-2022.png "Fig. 21")
+
+*Fig. 21 Stations sur la rangée extérieure droite*
+
+Si vous souhaitiez visualiser et analyser par vous même les températures, les mesures sont accessible, [ICI](https://bud.eco-sensors.ch/charts.php?field=3&date-from=2022-03-07&date-to=2022-03-08).
+
+Télécharger toutes les mesures en format A3 (pdf) [Page 1](Assets/pdf/graphique-7-3-2022_1.pdf) | [Page 2](Assets/pdf/graphique-7-3-2022_2.pdf)
+
 
