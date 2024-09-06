@@ -48,7 +48,7 @@ Pour surveiller le dégagement de la chaleur des bougies en temps réel, j’uti
 
 L’exercice va se produire dans la bas d’une vigne de M. Patrick Duvernay, à la Plaine (GE), avec la participation d’Ellinor Sekund d’AgriGenève. Cette parcelle a la particularité de se trouver dans un creux, là où la masse d’air froid s’accumule et n’est pas brassée. Par conséquent, les bourgeons sont exposés dans une zone à risque, lors du gel de printemps.
 
-![Fig. 4](Assets/images/bougie-pellet-situation-géographique.png "Fig. 4")
+![Fig. 4](Assets/images/bougie-pellet-situation-geeographique.png "Fig. 4")
 
 *Fig.4*
 
