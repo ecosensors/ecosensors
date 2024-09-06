@@ -12,7 +12,7 @@ Presses: [Vignes et Vergers N1](https://www.revuevitiarbohorti.ch/archives/?id_h
 Les stations prennent la température des bourgeons à une séquence définie ainsi que la radiation solaire et la vitesse du vent. La passerelle collecte les mesures et les transmet au serveur qui va les sauvegarder dans une base de données. Grâce à ceci, nous pouvons tirer des statistiques, traiter les données sauvegardées et les afficher sur votre portable (smartphone, laptop, etc.). 
 
 Des mesures au plus proche des bourgeons
-![Sondes Température waterproof](assets/images/smartbud/ds18b20.png "sonde température waterproof")
+![Sondes Température waterproof](../../Assets/images/smartbud/ds18b20.png "sonde température waterproof")
 
 Deux sondes de température placées à 1cm des bourgeons,
 Détection du gel par rayonnement,
@@ -22,7 +22,7 @@ Un baromètre pour mesurer la pression et la température de l’air ambiant,
 Une infrastructure pour couvrir jusqu’à 5 kilomètres de rayon à surveiller.
 
 ### Un outil, des bénéfices
-![Anenomètre](assets/images/smartbud/anenometer.png "Anenomètre")
+![Anenomètre](../../Assets/images/smartbud/anenometer.png "Anenomètre")
 
 Mesure et visualisation en temps réel,
 Simplification de la collecte et de l’interprétation des données,
