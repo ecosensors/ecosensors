@@ -553,5 +553,7 @@ On va maintenant connecter le [GPS GP-735](https://www.digikey.com/catalog/en/pa
 Observez bien les broches du GPS dans la [datasheet](Assets/pdf/GP-735T-150203.pdf), page 8 et 9
 
 ![GPS gp-735](Assets/images/connecting-gps-gp-735.png "GPS gp-735")
+![GPS gp-735](Assets/images/connecting-gps-gp-735-2.png "GPS gp-735")
+
 
 
