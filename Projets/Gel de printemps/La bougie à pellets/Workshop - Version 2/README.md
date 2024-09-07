@@ -373,6 +373,26 @@ J’ai eu beaucoup de plaisir à travailler avec eux, ce qui a été une expéri
 
 *Bougie en paraffine lors de l’allumage du 23 mars 2022*
 
+![Bougies à pellets](Assets/images/photos/bougie-26-3-22_6h45-600x450.jpg "Bougies à pellets")
+
+*Bougies à pellets, le 26 février 2022 à 6h45*
+
+![Station météo LoRaWAN](Assets/images/photos/station-meteo.jpg "Station météo LoRaWAN")
+
+*Station météo LoRaWAN avec un pyranomètre, un anémomètre, un baromètre et un petit panneau solaire*
+
+![Bougies à pellets](Assets/images/photos/bougies-pos3-nuit2.jpg "Bougies à pellets")
+
+*Bougies à pellets lors de la nuit du 23-24 mars 2022*
+
+![Allumage des bougies à pellets](Assets/images/photos/bougie-26-3-22_2h15-600x450.jpg "Allumage des bougies à pellets")
+
+*Allumage des bougies à pellets, le 26 février 2022 à 2h15*
+
+![Matériel pour l’assemblage des bougies à pellets](Assets/images/photos/bougies-construction-600x566.jpg "Matériel pour l’assemblage des bougies à pellets")
+
+*Matériel pour l’assemblage des bougies à pellets*
+
 
 
 
