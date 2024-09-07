@@ -344,3 +344,38 @@ J’ai eu beaucoup de plaisir à travailler avec eux, ce qui a été une expéri
 ![Station LoRaWAN avec deux sondes de température](Assets/images/photos/c-600x450.jpg "Station LoRaWAN avec deux sondes de température")
 
 *Station LoRaWAN avec deux sondes de température*
+
+![Bougies à pellets lors de la nuit du 23-24 mars 2022](Assets/images/photos/bougies-pos3-nuit1-600x450.jpg "Bougies à pellets lors de la nuit du 23-24 mars 2022 ")
+
+*Bougies à pellets lors de la nuit du 23-24 mars 2022*
+
+![Bougies à pellets lors des premiers allumages](Assets/images/photos/bougies-pellet-600x450.jpg "Bougies à pellets lors des premiers allumages")
+
+*Bougies à pellets lors des premiers allumages*
+
+![Bougies à pellets avec les chapeaux](Assets/images/photos/bougies-chapeaux-600x450.jpg "Bougies à pellets avec les chapeaux")
+
+*Bougies à pellets avec les chapeaux*
+
+![Bougies à pellets](Assets/images/photos/bougies-25-2-22_17h30-600x450.jpg "Bougies à pellets")
+
+*Bougies à pellets avant l’allumage du 24-25 février 2022*
+
+![Bougies à pellets durant la nuit du 23 mars 2022](Assets/images/photos/bougies-24-3-2022-600x450.jpg "Bougies à pellets durant la nuit du 23 mars 2022")
+
+*Bougies à pellets durant la nuit du 23 mars 2022*
+
+![Une bougie à pellets avec une station LoRaWAN](Assets/images/photos/bougie-station-600x450.jpg "Une bougie à pellets avec une station LoRaWAN")
+
+*Une bougie à pellets avec une station LoRaWAN et une sonde de température*
+
+![Bougie en paraffine lors de l’allumage](Assets/images/photos/bougie-paraffine-600x450.jpg "Bougie en paraffine lors de l’allumage")
+
+*Bougie en paraffine lors de l’allumage du 23 mars 2022*
+
+
+
+
+
+
+
