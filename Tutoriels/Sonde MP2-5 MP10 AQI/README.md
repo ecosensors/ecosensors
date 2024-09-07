@@ -21,7 +21,7 @@ Dans cet article, nous verrons comment
 * installation du capteur MH-Z19B
 * installer un serveur lighttpd et tinylora
 * préparer LoRaWAN et créer votre application TTN
-* envoyez les données
+* envoyez les données avec PycURL à la place de LoRaWAN
 * sauvez les mesures dans un fichier JSON
 * Installer et configurer un GPS (PG-735)
 * Installer un carte pour gérer la charge de la batterie avec un panneau solaire
@@ -32,7 +32,7 @@ Dans cet article, nous verrons comment
 * [Raspberry Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) (CHF 24.--)
 * [RFM 95 Lorawan/TTN hat with OLED LCD](https://www.tindie.com/products/electronictrik/lorawanttn-kit-for-the-raspberry-pi/) ($40.--)
 * [Nova SDS011](https://www.conrad.ch/fr/p/module-capteur-joy-it-feunstaubsensor-uart-sen-sds011-1-pc-s-1884873.html?gclid=Cj0KCQjw4dr0BRCxARIsAKUNjWT3VCLIRbORVSSGzu8LDaWvpKLrUchu98nh14xlgFnS5BYh1SNIBccaAujLEALw_wcB&utm_source=google-shopping-fr&utm_medium=search&utm_campaign=shopping-online-fr&utm_content=shopping-ad_cpc&WT.srch=1&ef_id=Cj0KCQjw4dr0BRCxARIsAKUNjWT3VCLIRbORVSSGzu8LDaWvpKLrUchu98nh14xlgFnS5BYh1SNIBccaAujLEALw_wcB%3AG%3As) (CHF 38.--)
-* [MH-Z19D](https://www.winsen-sensor.com/d/files/PDF/Infrared%20Gas%20Sensor/NDIR%20CO2%20SENSOR/MH-Z19%20CO2%20Ver1.0.pdf)
+* [MH-Z19D](Assets/pdf//MH-Z19%20CO2%20Ver1.0.pdf)
 * Un adaptateur USB -> MicroUSB
 * [GPS GP-735](https://www.digikey.com/catalog/en/partgroup/gps-receiver-gp-735-56-channel/66012)
 * [Solar Power management](https://www.waveshare.com/solar-power-manager.htm)
@@ -437,7 +437,7 @@ Pour terminer, vous devez encore modifier les paramètres de ce Device. Vous ver
 
 Cliquez dessus, et modifiez les paramètres suivants
 
-![Settings TTN](Assets/images/aqi-ttn-device-settings.png "Settings TTN"
+![Settings TTN](Assets/images/aqi-ttn-device-settings.png "Settings TTN")
 
 
 * **Activation Method** => ABP
@@ -453,3 +453,105 @@ Ultérieurement vous allez avoir besoin des clés **App Session Key**, **Network
 ## TinyLora
 
 > [Commentaire ajouté le 6.9.2024] TinyLORA n'est pas compatible avec The Things Network Slack v3. Étant donné que TTN a entièrement migré vers la version 3, cette bibliothèque n'est plus en mesure de communiquer avec TTN.
+
+Pour envoyer les données avec LoRaWAN aux serveur TTN (The Things Network), nous allons devoir installer une librairie d’Adafruit. Retourner sur votre Raspebrry
+
+```
+ssh pierrot@sds011.local # remplacer ssds011 par le hostname que vous avez choisi précédement
+```
+
+et installez la librairie tinylora
+
+```
+sudo pip3 install adafruit-circuitpython-tinylora
+```
+
+Editer le fichier `sudo nano /opt/sds011/aqi-v1.py`
+
+et ajoutez les lignes suivantes en haut du fichier (je les ai mise en dessous de import busio
+
+```
+from digitalio import DigitalInOut, Direction, Pull
+from adafruit_tinylora.adafruit_tinylora import TTN, TinyLoRa
+# importer encore board, si vous n'utilisez pas l'écran OLED, car il a déjà été importer lors de l'installation de SSD1306
+# import board
+
+# TinyLoRa Configuration
+## Attention, cette configuration dépendra du module radio que vous utiliser. Celle-ci fonctionne très
+## bien pour le module d'adafruit RFM95W LoRa Radio
+spi = busio.SPI(board.SCK, MOSI=board.MOSI, MISO=board.MISO)
+cs = DigitalInOut(board.CE1)
+irq = DigitalInOut(board.D5)
+rst = DigitalInOut(board.D25)
+
+# TTN Device Address, 4 Bytes, MSB
+devaddr = bytearray([0x00, 0x00, 0x00, 0x00])
+# TTN Network Key, 16 Bytes, MSB
+nwkey = bytearray([0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+# TTN Application Key, 16 Bytess, MSB
+app = bytearray([0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+
+# Initialize ThingsNetwork configuration
+ttn_config = TTN(devaddr, nwkey, app, country='EU')
+lora = TinyLoRa(spi, cs, irq, rst, ttn_config)
+# 2b array to store sensor data
+data_pkt = bytearray(2)
+```
+
+Vous allez devoir informer les clés (key) que vous trouverez dans votre [console TTN (allez dans Application)](https://console.thethingsnetwork.org/applications), et éditez l’application que vous avez créé plus tôt.
+
+Puis cliquez sur le Device et puis sur le « device » que vous avez aussi déjà créé
+
+
+![TTN Devise](Assets/images/ttn-device.png "TTN Devise")
+
+et relever les clés **Device Address (devaddr)**, **Network Session Key (nwkey)** et **App Session Key (app)**
+
+![TTN Devise](Assets/images/ttn-device-key.png "TTN Devise")
+
+Note:
+
+* Cliquez sur <> pour avoir le format {0x9c, 0x91…, 0xBC}
+* Cliquez sur les deux flèches inversées pour avoir le format msb
+* Cliquez sur l’icon de droite, pour copier la clé dans votre presse-papier
+
+Vous allez maintenant remplacer vos clés ici
+
+```
+# TTN Device Address, 4 Bytes, MSB 
+devaddr = bytearray([0x00, 0x00, 0x00, 0x00]) 
+# TTN Network Key, 16 Bytes, MSB 
+nwkey = bytearray([0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]) 
+# TTN Application Key, 16 Bytess, MSB 
+app = bytearray([0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+```
+
+**Attention de bien remplacer les {} par []**
+
+## PycURL à la place de LoRaWAN
+
+Dans certains cas il peut être nécessaire d’envoyer des données via un routeur WiFi à la place de passer par le protocole  et une passerelle LoRaWAN. Pour une station, cette situation s’est présentée car il n’y avait pas de passerelle LoRaWAN dans le périmètre et il me fallait prendre des mesures dans cette location. Il était aussi trop onéreux de mettre en place une passerelle, que je n’avais pas en stock d’ailleur. La solution PycURL s’est montré très utile puisqu’un routeur WiFi était à disposition.
+
+Info : https://stackabuse.com/using-curl-in-python-with-pycurl/
+
+Installation de la librairie
+
+```
+sudo pip3 install pycurl
+```
+
+## GPS
+
+Source:
+
+* https://ozzmaker.com/berrygps-setup-guide-raspberry-pi/
+* https://ozzmaker.com/using-python-with-a-gps-receiver-on-a-raspberry-pi/
+* https://fishandwhistle.net/post/2016/using-pyserial-pynmea2-and-raspberry-pi-to-log-nmea-output/
+
+On va maintenant connecter le [GPS GP-735](https://www.digikey.com/catalog/en/partgroup/gps-receiver-gp-735-56-channel/66012).
+
+Observez bien les broches du GPS dans la [datasheet](Assets/pdf/GP-735T-150203.pdf), page 8 et 9
+
+![GPS gp-735](Assets/images/connecting-gps-gp-735.png "GPS gp-735")
+
+
