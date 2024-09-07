@@ -555,5 +555,114 @@ Observez bien les broches du GPS dans la [datasheet](Assets/pdf/GP-735T-150203.p
 ![GPS gp-735](Assets/images/connecting-gps-gp-735.png "GPS gp-735")
 ![GPS gp-735](Assets/images/connecting-gps-gp-735-2.png "GPS gp-735")
 
+Connexion:
+
+GPS | Raspberry
+--- | ---
+Borche 1 | GND
+Broche 2 | 5V
+Broche 3 | (TXa) broche Rx
+Broche 4 | (RXb) broche Tx
+Broche 6 | Broche 18
 
 
+Il va falloir encore modifier la configuration de votre Raspbbery `sudo raspi-config`
+
+Sélectionnez *5 Interfacing Options*, puis P6 Serial, répondez *NON* à la prochaine question, puis *OUI* à la dernière question.
+
+Vous allez devoir redémarrer votre Raspberry.
+
+Vous pouvez déjà voir si ça fonctionne en lisant les données du GPS, de cette manière
+
+```
+sudo cat /dev/ttyS0 # Pour un Raspbbery 3
+sudo cat /dev/ttyAMA0 # Pour les autres
+```
+### Parser les données de GPS
+
+Installons maintenant la libraire pynma2
+
+```
+sudo pip3 install pynmea2
+```
+
+Ouvrez votre fichier `sudo nano /opt/sds011/aqi-v1.py`
+
+et ajoutez en haut du fichier
+
+```
+import pynmea2, serial
+```
+
+Autres liens utiles
+
+* https://www.sparkfun.com/tutorials/403
+* https://github.com/Knio/pynmea2/blob/master/NMEA0183.pdf
+* https://circuitpython.readthedocs.io/en/1.0.0/docs/esp8266/tutorial/pins.html
+
+
+## Économiser la consommation sur la batterie
+
+### Désactivation du bluetooth
+
+Afficher le status `systemctl status bluetooth`
+
+Désactivation
+
+```
+echo " " | sudo tee -a /boot/config.txt
+echo "# Diable Bluetooth" | sudo tee -a /boot/config.txt
+echo "dtoverlay=pi3-disable-bt" | sudo tee -a /boot/config.txt
+sudo systemctl disable hciuart
+sudo reboot
+```
+
+> Après avoir désactivé le Bluetooth, mon Raspberry n’était plus capable de lire sur le port ttyS0. Le GPS communiquait via le port ttyAMA0. J’ai du adapter mon code en conséquence
+
+### Désactivation des LED
+
+```
+echo " " | sudo tee -a /boot/config.txt
+echo "# Diable On-board LEDs" | sudo tee -a /boot/config.txt
+echo "dtparam=act_led_trigger=none" | sudo tee -a /boot/config.txt
+echo "dtparam=act_led_activelow=on" | sudo tee -a /boot/config.txt
+sudo reboot
+```
+
+### Désactivation du port HDMI
+
+Le port HDMI ne sera pas utiliser, donc pas d’écran connecté. Ce qui permettrait de sauver jusqu’à 30mA
+
+```
+sudo /opt/vc/bin/tvservice -o # Pour désactiver
+sudo /opt/vc/bin/tvservice -p # Pour activer
+```
+
+## DYNU / ddclient
+
+https://www.dynu.com/DynamicDNS/IPUpdateClient/DDClient
+
+Vous devez d’abord créer un host chez dyndns.
+
+Puis sur votre rapsberry, installer le client
+
+```
+sudo apt install ddclient
+```
+
+Vous allez devoir répondre à plusieurs questions
+
+* **Fournisseur de service DNS dynamique:** autre
+* **Serveur de DNS dynamique:** api.dynu.com
+* **Protocole de mise à jour du DNS dynamique:** dyndns2
+* **Identifiant pour les service… :** Votre identifiant
+* **Mots de passe pour …:** Votre mots de passe
+* **Interface utilisée par …? :** wwan0
+* **Nom de domaine de DNS ..:** host.ddnsfree.com
+
+```
+sudo ddclient -daemon=0 -debug -verbose -noquiet
+
+```
+
+sudo nano /etc/ddclient.conf
