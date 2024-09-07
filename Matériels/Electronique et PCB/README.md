@@ -37,12 +37,6 @@ This is a not-exhaustive list of my LoRaWAN structure and board elements
 * Quectel EC25 Mini PCIe 4G/LTE Module
 * 2 LTE antenna
 
-## Sensors
-* Pyranometer: Davis Instrument 8450
-* Anenometer: Davis Instrument 6410
-* Barometer: Boesch BME280
-* Pluviometer
-* Solar Panel: 5W
 
 ## LoRaWAN Meteo stations
 ### Main board
@@ -79,9 +73,14 @@ This is a not-exhaustive list of my LoRaWAN structure and board elements
 * 3 status LEDs (power/charging/done)
 * Raspberry connector
 
+### Sensors
+* Pyranometer: Davis Instrument 8450
+* Anenometer: Davis Instrument 6410
+* Barometer: Boesch BME280
+* Pluviometer
+* Solar Panel: 5W
 
-
-### LoRaWAN Irrigation stations (Smart Irrigation)
+## LoRaWAN Irrigation stations (Smart Irrigation)
 * PCB Version: fox-board_full_mcp-v3
 * LoRaWAN Library: Arduino-lmic 4.1.1
 * LoRaWAN Chip: RFM95, Band ISM, 868Mhz
@@ -138,4 +137,4 @@ This is a not-exhaustive list of my LoRaWAN structure and board elements
 * 4 LEDs
 
 ### Sensors
-* 4 1-Wire DS18B20 waterproof temperature sensorso the ecosensors wiki!
+* 4 1-Wire DS18B20 waterproof temperature sensors
