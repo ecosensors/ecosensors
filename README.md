@@ -1,6 +1,6 @@
 Hi, I’m @ecosensors
 
-Ici je vous présente les projets IoT que j'ai mis en place
+Ici je vous présente [mes projets IoT](https://github.com/ecosensors/ecosensors/tree/main/Projets) que j'ai mis en place
 
 * SmartIrrigation: Pour surveiller en temps réel, la teneur en eau dans le sol
 * SmartBud: Pour lutter contre le gel de preintemps (surveillance de la température des bourgeons en temps réel)
