@@ -133,9 +133,37 @@ network={
 ```
 
 ### Python3
+Installez ces packages
+
+```
+sudo apt install python3-smbus
+sudo pip3 install psutil
+```
+
+Créez un fichier python que nous allons remplir au fur et à mesure
+
+```
+sudo mkdir -p /opt/sds011/
+sudo nano /opt/sds011/aqi-v1.py # Ne pas le nommer aqi.py
+```
+
+et ajoutez les ligne suivantes au début du fichier
+
+```
+#!/usr/bin/env python3
+import time, json 
+from datetime import datetime
+import psutil
+```
+
+Sauver et quitter
 
 
-
+### Display LCD
+Sources:
+Sourec:
+* https://learn.adafruit.com/monochrome-oled-breakouts/python-setup
+* https://github.com/adafruit/Adafruit_CircuitPython_SSD1306/blob/master/adafruit_ssd1306.py
 
 
 
