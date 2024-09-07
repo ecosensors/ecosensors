@@ -9,3 +9,5 @@ Dans cet article, je vais vous montrer comment installer Ubuntu, Apache, MariaDB
 J’ai écris cet article au fur et à mesure de mes investigations pour arriver à mes fins, sans avoir une connaissance approfondie sur les VM (Container Manager / Docker) avec Synology. Si vous découvrez une erreur ou une amélioration, je serai ravi d’avoir votre partage. Cet article est encore en cours de rédaction
 
 Cet exercie est réalisé avec un Macbook, un NAS synology DS220+ (DSM 7.2), dans un réseau local (Routeur WiFi de mon domicile).
+
+(En cours de rédaction)
