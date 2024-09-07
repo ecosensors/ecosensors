@@ -48,7 +48,7 @@ L’EPA (l’Environmental Protection Agency des États-Unis), ne tienne pas  co
 En suisse, l’indice de pollution de l’air à court terme (IPC, également appelé IPAIR22) repose sur la mesure de trois polluants : l’ozone, le dioxyde d’azote et les particules fines PM10. Il compte 6 niveaux:
 
 Indice IPC | O3 | NO2 | PM10 | Pollution
----
+--- | --- | --- | --- | ---
 1 | 0 à 90 | 0 à 60 | 0 à 37 | Faible
 2 | 91 à 120 | 61 à 80 | 38 à 50 | Modérée
 3 | 121 à 150 | 81 à 100 | 51 à 62 | Significative
