@@ -2,6 +2,8 @@
 
 *Publié le 11 juin 2020*
 
+![Sonde AQI](Assets/images/aqi-station.jpg "Sonde AQI")
+
 Dans cet article, je vais vous montrer comment préparer un Raspberry et Python3 pour mesurer les poussières fines PM2.5 et PM10 et comment transmettre les mesures à un serveur distant grâce à LoRaWAN
 
 J'attire votre attention que cet article n'est pas un tutoriel, mais mes notes. Il vous apportera les outils et des astuces pour le faire, mais il vous sera demandé un minimum de compétences. Cet article est donc mené à être modifier et améliorer.
@@ -40,7 +42,7 @@ Commencer par télécharger la dernière version de Rasbian Buster Desktop que v
 
 Téléchargez et installez la dernière version d'[Etcher](https://www.balena.io/etcher/) et créez l’image sur la carte SD
 
-![Etcher](Assets/images/iot-schema.jpg "Etcher")
+![Etcher](Assets/images/etcher.png "Etcher")
 
 *Etcher (2019-09-2...-lite.img est représentatif, vous devriez voir quelque chose comme 2020-02-1...lite.zip)*
 
