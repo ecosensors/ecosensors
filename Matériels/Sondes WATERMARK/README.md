@@ -41,4 +41,5 @@ La sonde doit être trempée dans un récipient d’eau, au moins 30mn avant de 
 J’ai acquis un lecteur Watermark Digital Reader pour comparer les mesures calculées avec la version 2 de mon circuit imprimé. Après avoir calibré le Watermark Digital Reader avec la température du sol, les mesures prises avec cet appareil sont identiques (à 3-5Kpa près) avec celles des mes stations
 
 ![Watermark Reader](Assets/images/watermark-reader.jpg "Watermark Reader")
+
 *Watermark Reader*
