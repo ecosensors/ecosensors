@@ -28,7 +28,7 @@ Les stations mesurent le taux hydrique du sol à une séquence définie ainsi qu
 * Augmentation du rendement
 
 
-## Mais encore...
+# Présentation du projet SmartIrrigation
 [Presentation sur Youtube](https://www.youtube.com/watch?v=QYvQ2LWMCxo&t=6s)
 
 De nombreux types de capteurs et systèmes d’enregistrement de données ont été développés à cette fin. Leur adoption est encore limitée pour des raisons de coûts élevés et des difficultés dans la collecte et l’interprétation des données en temps opportun.
