@@ -10,6 +10,6 @@ Ici je vous présente [mes projets IoT](https://github.com/ecosensors/ecosensors
 
 (En cours de développement)
 
-Here is a resume and a not-exhaustive [list of material](https://github.com/ecosensors/ecosensors/wiki/List-of-the-materials-(LoRaWAN-Gateways-and-nodes)) of my LoRaWAN structure and board componment.
+[liste de mon material](https://github.com/ecosensors/ecosensors/wiki/List-of-the-materials-(LoRaWAN-Gateways-and-nodes)) et de mes carte (PCB) LoRaWAN et des composants.
 
-How to reach me : [EcoSensors](https://www.eco-sensors.ch)
+EcoSensors](https://www.eco-sensors.ch)
