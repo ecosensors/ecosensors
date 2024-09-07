@@ -345,7 +345,6 @@ Vous pouvez maintenant accéder à la page de l’assistant de configuration d�
 sudo a2dissite 000-default.conf
 ```
 
-
 ### Setup de InvoiceNinja
 
 Vous pouvez maintenant lancer le setup de InvoiceNinja en suivant cette url https://invoice.mondomaine.ch. Cependant, j’ai rencontré une erreur **« Blocked loading mixed active content »**
