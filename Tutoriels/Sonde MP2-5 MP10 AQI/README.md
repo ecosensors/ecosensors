@@ -2,6 +2,8 @@
 
 *Publié le 11 juin 2020*
 
+> [Commentaire ajouté le 6.9.2024] TinyLORA n'est pas compatible avec The Things Network Slack v3. Étant donné que TTN a entièrement migré vers la version 3, cette bibliothèque n'est plus en mesure de communiquer avec TTN.
+
 ![Sonde AQI](Assets/images/aqi-station.jpg "Sonde AQI")
 
 Dans cet article, je vais vous montrer comment préparer un Raspberry et Python3 pour mesurer les poussières fines PM2.5 et PM10 et comment transmettre les mesures à un serveur distant grâce à LoRaWAN
@@ -327,8 +329,127 @@ with open(JSON_FILE, 'w') as outfile:
     json.dump(data, outfile)
 ```
 
+### MH-Z19B
+
+* Datasheet: https://www.winsen-sensor.com/d/files/infrared-gas-sensor/mh-z19b-co2-ver1_0.pdf
+* Librairie : https://pypi.org/project/mh-z19/
+* Github (forked): https://github.com/ecosensors/mh-z19Port 
+* Série (UART): https://www.framboise314.fr/utiliser-le-port-serie-du-raspberry-pi-3-et-du-pi-zero/
+
+**Le capteur utilise les broche Tx et Rx (GPIO 14 et 15). Vous devez donc activer le port UART et déactiver la console.**
 
 
+#### Activation du Port Serial (UART)
+Pour cela, ouvrez votre terminal et allez dans raspi-config
+
+```
+sudo raspi-config
+```
+
+Choisissez **5 Interfacing Options**, et activez :
+* P6 Serial
+
+A la première question **Would you like a login shell to be accessible over Serial?**, répondez NO
+
+A la deuxième question **Would you like the Serial port hardware to be enable?** répondez YES
+
+#### Désactivation de la console
+
+La console utilise le port Serial, vous devez donc la désactiver.
+
+Editez le fichier suivant
+
+```
+sudo nano /boot/cmdline.txt
+```
+
+trouvez le texte suivant et supprimez-le
+
+> console=serial0, 115200
+
+puis, redémarrer votre Raspberry
+
+### Assemblage
+
+Connectez le capteur au raspberry comme ceci:
+
+PI | MH-Z19B
+--- | ---
+5V | vin
+GND | GND
+Tx | Rx
+Rx | Tx
+
+### Installation de la librairie MH-Z10B
+
+Lancez la commande
+```
+sudo pip3 install mh-z19
+```
+
+Vous pouvez déjà contrôler si va fonctionne
+
+```
+sudo python3 -m mh_z19
+```
+
+Ce qui m’affiche
+
+> {"co2": 697}
+
+Nous avons précédemment ajouté régulièrement des lignes dans le fichier aqi-v1.py. C’est ce que nous allons refaire maintenant
+
+Editer le fichier `sudo nano /opt/sds011/aqi-v1.py`
+
+et ajouter les lignes
+
+```
+import mh_z19 # Vous devez ajoutez ceci au debut du fichier
+
+print('[INFO: Getting CO2]')
+#print(mh_z19.read_all())
+co_2 = mh_z19.read()
+print("co2: " + str(co_2['co2']))
+```
+
+## LoRaWAN
+
+Source : https://learn.adafruit.com/lora-and-lorawan-radio-for-raspberry-pi/sending-data-over-lorawan
+
+### The Things Network
+
+Rendez-vous dans votre [console](https://console.cloud.thethings.network/) et créez une application que je vais nommer aqi-sds011
+
+![Console TTN](Assets/images/aqi-ttn-application.png "Console TTN")
 
 
+![App TTN](Assets/images/api-ttn-application-view.png "App TTN")
 
+Vous allez devoir maintenant créer un Devise. Retourner sur vos applications et cliquez sur l’application que vous venez de créer et cliquez sur l’onglet **Devices**
+
+![Devise TTN](Assets/images/aqi-ttn-new-devise.png "Devise TTN")
+
+Sous le champs **Device EUI**, assurez-vous qu’il y a bien le texte this field will be generated, si non, donnez un identifiant unique, ou cliquez sur les deux flèches qui se croisent, à côté du champs. Cliquez sur **Register**.
+
+Pour terminer, vous devez encore modifier les paramètres de ce Device. Vous verrez, en haut à droite l’onglet **Settings**.
+
+![Settings TTN](Assets/images/aqi-ttn-device-setting-tab.png "Settings TTN")
+
+Cliquez dessus, et modifiez les paramètres suivants
+
+![Settings TTN](Assets/images/aqi-ttn-device-settings.png "Settings TTN"
+
+
+* **Activation Method** => ABP
+* **Frame Counter Width** => 16 bit
+* **Frame Counter Check** => Délectionnez-le
+
+et cliquez sur **Save**
+
+Le méthode OTAA est souvent recommandée et vous êtes libre de faire comme vous le souhaiter.
+
+Ultérieurement vous allez avoir besoin des clés **App Session Key**, **Network Session Key** et **Devise address** que vous pourriez déjà relever.
+
+## TinyLora
+
+> [Commentaire ajouté le 6.9.2024] TinyLORA n'est pas compatible avec The Things Network Slack v3. Étant donné que TTN a entièrement migré vers la version 3, cette bibliothèque n'est plus en mesure de communiquer avec TTN.
