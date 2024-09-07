@@ -56,5 +56,65 @@ Cette fois-ci, j’ai ajouté 4 sondes supplémentaires pour mesurer deux niveau
 
 *Mesures du 21 novembre 2021 de la température mesurée par les 4 sondes se trouvant à env. 1m du sol et à env. 60cm de la bougie*
 
+![Bougies](Assets/images/bougie_21-11-2021_1.jpg "Bougies")
+
+![Bougies](Assets/images/bougie_21-11-2021_2.jpg "Bougies")
+
+*Uue sur la bougie à pellets*
+
+![Sonde](Assets/images/bougie_21-11-2021_6.jpg "sonde")
+
+*Vue sur une station avec ses sondes de température*
+
+![Sonde](Assets/images/bougie_21-11-2021_8.jpg "sonde")
+
+## Mesures du 20 novembre 2021
+
+La bougie a été placée dans une vigne qui est sensible au gel de printemps, afin de tester la bougie à pellets dans un environnement réel, en prévision du gel de printemps 2022.
+
+![Mesures](Assets/images/bougie-v2_2021-11-20_22-20_v2.png "Mesures")
+
+*Mesures du 20 novembre 2021 de 22h30 à 8h*
+
+La courbe rouge représente la température de l’air ambiante, à un peu plus de 1m du sol. Les 4 autres courbes représentent la température dégagée par la bougie, mesurée au nord, à l’est, au sud et à l’ouest de cette dernière.
+
+
+![Allumage](Assets/images/bougie_20-11-2021_1.jpg "Allumage")
+
+*Allumage de la bougie avec un allume-feu et un briquet*
+
+![Sondes](Assets/images/bougie_20-11-2021_5.jpg "Sondes")
+
+*Les 4 sondes se trouvent à env. 60cm de la bougie à pellets. Une est au nord, à l’est, au sud et à l’ouest. Elles se trouvent à +/- 30cm du sol*
+
+![Sondes](Assets/images/bougie_20-11-2021_2.jpg "Sondes")
+
+*Les 4 sondes se trouvent à env. 60cm de la bougie à pellets. Une est au nord, à l’est, au sud et à l’ouest. Elles se trouvent à +/- 30cm du sol*
+
+
+![Sondes](Assets/images/bougie_20-11-2021_4.jpg "Sondes")
+
+![Bongie au matin](Assets/images/bougie_20-11-2021_6.jpg "Bougie au matin")
+
+*Une fois que tous les pellets ont été brûlés*
+
+## Mesures du 13 octobre 2021
+
+![Mesures](Assets/images/bougie-mesures-13-10-21.png "Mesure")
+
+*Mesures prises le 13 octobre 2021 entre 22h30 et 7h00*
+
+## Mesures du 9 octobre 2021
+La ligne rouge est la température de l’air ambiante alors que les 4 autres lignes représentent les températures mesurées autour de la bougie (Nord, Est, Sud, Ouest).
+
+![Mesures](Assets/images/bougie-mesures-9-10-21-1.png "Mesure")
+
+*Mesures prises le 9 octobre 2021 entre 10h30 et 18h30*
+
+![Mesures](Assets/images/bougie-mesures-9-10-21-2.png "Mesure")
+
+*Mesures prises le 9 octobre 2021 entre 22h30 et 7h00*
+
+
 
 
