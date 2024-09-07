@@ -6,7 +6,6 @@ This is a not-exhaustive list of my LoRaWAN structure and board elements
 
 ### LoRaWAN Gateway 1 (solar)
 ![MPTT Regulator](https://github.com/ecosensors/ecosensors/blob/main/Assets/gateway-solar-git.png "MPTT Regulator")
-![MPTT Regulator](https://eco-sensors.ch/wp-content/uploads/2022/04/ttig-box.jpg "MPTT Regulator")
 
 * TTIG [Read More](https://www.thethingsindustries.com/docs/gateways/thethingsindoorgateway/)
 * 3x60W second hand solar panel
