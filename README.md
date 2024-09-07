@@ -15,4 +15,4 @@ Je présente [mes projets LoRaWAN (IoT)](https://github.com/ecosensors/ecosensor
 
 [liste de mon material](https://github.com/ecosensors/ecosensors/tree/main/Mat%C3%A9riels) et de mes carte (PCB) LoRaWAN et des composants.
 
-[EcoSensors](https://www.eco-sensors.ch)
+Site web: [EcoSensors](https://www.eco-sensors.ch)
