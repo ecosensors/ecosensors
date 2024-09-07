@@ -186,4 +186,67 @@ Entre temps, j’ai développé l’application SMART BUD pour Android et IOS, q
 
 De ce fait, l’application Telegram a été mise de côté. Cependant, la domotique reste dans le projet, car une boite domotique pourra être installée chez un exploitant **pour générer des alarmes visuelles**, comme une sirène, un gyrophare ou le clignotement des lumières d’un domaine.
 
+## Déroulement
+### Présentation du terrain
 
+Le projet est mené grâce à la collaboration du [Domaine Les Hutins](https://www.domaineleshutins.ch/) à Dardagny (GE) et [du domaine La Printanière](http://laprintaniere.ch/) à Avully (GE) qui ont mis à disposition deux parcelles de 1 hectare et 4 hectares. En tout 14 stations ont été déployées dans ces deux parcelles.
+
+Quatre stations « bourgeon » et une station météo ont été installées dans la parcelle de 1 hectare.
+
+![Station Printanière](Assets/images/stations-printamiere.png "Station Printanière")
+
+*4 stations bourgeons et 1 station météo*
+
+Sept stations « bourgeon » et une station météo ont été installées dans la parcelle de 4 hectares. Le 30 avril 2021, nous avons retiré 2 stations « bourgeon » pour ne conserver que les stations dans le creux de la parcelle.
+
+![Station Les Hutins](Assets/images/stations-hutin.png "Station Les Hutins")
+
+*7 stations « bourgeons », 1 station meteo, 1 station qui simule la température du feuillage et d’un bourgeon*
+
+Entre le deux parcelles, une passerelle (Gateway) LoRaWAN collectera les données de toutes les stations.
+
+![Gateway LoRaWAN](Assets/images/gateway-vue1-small.png "Gateway LoRaWAN")
+
+*Vue en direction de la passerelle depuis la parcelle de 1 hectare*
+
+### Le déroulement
+Toutes les 15 minutes, les stations mesurent la température *à 1cm des bourgeons et à 30 cm et env. 1,5m du sol*.
+
+Sur les hauteurs de chaque parcelle, *une station météo mesurera la vitesse du vent et le rayonnement solaire* grâce à deux sondes de Davis Instrument.
+
+
+![Une station LoRaWAN](Assets/images/pyranometre-anemometre-600x450.jpg "Une station LoRaWAN")
+
+*Une station avec un anémomètre, un pyranomètre et un baromètre*
+
+Pour compléter les mesures, j’ai acquis un détecteur de gel par rayonnement SF-110 d’Apogee Instrument.
+
+Une passerelle LoRaWAN, autonome en énergie, est donc installée entre les deux parcelles et récolte les mesures envoyées par toutes les stations à tout moment. Elle traite les données et les transmet à un serveur distant pour sauver les données dans une base de données.
+
+![Une Gateway LoRaWAN](Assets/images/remorque-solaire.jpg "Une gateway LoRaWAN")
+
+*Passerelle LoRaWANN Autonome grâce aux panneaux solaires*
+
+## Dégats causé par gel de pritemps
+Entre les nuits du 7avril et 9 avril 2021, une masse d’air froid polaire accompagné de vent a causé de gros dégâts dans l’arc lémanique. Après trois nuits glaciales allant jusqu’à -8°C dans certains endroits, les pertes s’annoncent énormes. Certaines parcelles approchent 100% de dégâts, principalement dans le canton du Valais où le débourrage et la fleuraison était avancée.
+
+Au matin du 7 avril 2021, le domaine Jean-Noël Devènes (VS) a subi 100% de perte en l’espace de deux heures, malgré tous les efforts effectués pour sauver leurs récoltes.
+
+En France, tôt le jeudi 8 avril 2021, certains viticulteurs bourguignons, tentaient encore de protéger leurs vignes du gel. Pour la troisième nuit consécutive, des gelées importantes ont touché les vignes. Les bougies, les jets d’eau et même parfois les hélicoptères n’ont pas suffit à éviter le gel des bourgeons. Le vignoble d’Arbois (Jura), a été au moins détruit 60% à 90%.
+
+En revanche, les deux vignes où ont été installées les sondes, dans le cadre du projet pilote SMART BUD, ont subi de toutes petites pertes, même si dans certains secteurs, les sondes ont mesuré des températures allant jusqu’à -8°C. Ceci s’explique par différentes raisons.
+
+
+![Mesure](Assets/images/smart-bud-nuit-8-9-avril-2021.png "Mesure")
+
+*Nuits du 7,8 et 9 avril 2021*
+
+Premièrement, la taille des vignes a été faite plus tard, et de ce fait les organes végétaux se trouvaient encore dans le stade d’éclatement des écailles à bourgeons, qui permet à la vigne de supporter des températures jusqu’à -8°C. Lors de notre visite de la vigne, nous avons malgré tout constaté des bourgeons gelés.
+
+Mais cette quantité n’est pas signifiante, car lors de l’ébourgeonnage, un tri des bourgeons est effectué afin de préserver un espace entre les bourgeons. Cette étape est cruciale pour que la fleuraison soit aérée et pour que la vigne consacre sa force qu’aux bourgeons sélectionnés, après ce tri. De ce fait, les bourgeons touchés par le gel seront supprimés sans que des pertes ne soient finalement recensées.
+
+Cependant le danger n’est pas écarté, car d’ici la troisième semaine du mois d’avril 2021, un redoux est annoncé ce qui va accélérer la fleuraison des bourgeons pour passer au stade de jeunes pousses vertes, ce qui rendra la vigne plus vulnérable au gel. Sachant encore que l’effet du gel de printemps, principalement le gel radiatif, peut se produire jusqu’au mois de mai. Les exploitants resteront donc aux aguets dans le cas d’un nouveau cas de gel, pour intervenir rapidement en réchauffant les zones avec des bougies aux paraffines.
+
+Même si cette période, soit du 7 au 9 avril 2021, a été malheureusement dévastatrice pour de nombreux arboriculteurs de l’arc lémanique, elle nous a permis de valider le fonctionnement de SMART BUD, par les nombreuses alarmes générées sur nos smartphones. Ce qui est important vu le redoux annoncé et la fleuraison des bourgeons pour ces prochaines semaines
+
+Les sondes SMART BUD installées dans ces deux parcelles, sont là pour les aider à surveiller les températures de leurs bourgeons, en temps réel et d’être immédiatement alarmé quand les températures descendent au-dessous d’un seuil critique. Mais elles ne permettent pas que de mesurer les températures. Grâce à l’application SMART BUD, disponible sur Apple Store et Google Play, ils peuvent aussi connaître la radiation solaire et la vitesse du vent, au niveau des parcelles.Situation au 2-3 mai 2021
