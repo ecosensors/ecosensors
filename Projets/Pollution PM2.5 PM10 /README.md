@@ -7,7 +7,7 @@ L’objectif est donc de mesurer l’index qualité de l’air pendant l’évol
 Pour cela, une première station a été placée sur un mur destiné à protéger les riverains du bruit occasionné par le passage des véhicules sur l’A1.
 
 
-![Station AQI](Assets/images/photos/aqi-experiece1.jpg "Station AQI")
+![Station AQI](Assets/images/aqi-experiece1.jpg "Station AQI")
 
 
 Elle ne peut pas être mieux placée car elle se trouve à quelques mettre de la voie de secours. Je remercie au passage le propriétaire du terrain, pour m’avoir autorisé de placer cette station sur son terrain. Je précise encore que la station ne se trouve pas sur l’autoroute même, mais de l’autre côté des barrières de sécurité.
@@ -16,7 +16,7 @@ Elle ne peut pas être mieux placée car elle se trouve à quelques mettre de la
 
 La technologie utilisée est la même que pour le projet SMART IRRIGATION. soit LoRaWAN. LoRaWAN est un protocole de télécommunication permettant la communication à bas débit, par radio, d’objets à faible consommation électrique communiquant selon la technologie LoRa et connectés à l’Internet via des passerelles.
 
-![LoRaWAN schema](Assets/images/photos/iot-schema.jpg "LoRaWAN schema")
+![LoRaWAN schema](Assets/images/iot-schema.jpg "LoRaWAN schema")
 
 Toutes les stations (ou noeuds) prennent leurs mesures et envoient les données à la passerelle (Gateway). Cette dernière les traite et les envoie au serveur qui va lui les sauver dans une base de données pour que l’utilisateur puisse visualiser les valeurs en temps réel.
 
