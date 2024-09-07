@@ -387,7 +387,7 @@ sudo service mariadb start
 #sudo systemctl enable apache2 ne fonctionne pas
 ```
 
-Apparemment, cette erreur est dû au container. Dans Container Manager, il faudrait créer un projet avec un fichier ‘docker-compose.yml’ qui démarre ces deux services. J’étudierai ceci plus tard.
+Apparemment, cette erreur est dû au container. Dans Container Manager, il faudrait créer un projet avec un fichier `docker-compose.yml` qui démarre ces deux services. J’étudierai ceci plus tard.
 
 
 ## Références:
