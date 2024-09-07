@@ -1,6 +1,19 @@
 # SmartIrrigation
-## Pour planifier l'irrigation des cultures
+**Pour planifier l'irrigation des cultures**
 L’objectif est de développer et mettre en pratique une solution, à bas coût, pour mieux surveiller et planifier l’irrigation des cultures en temps réel, et ainsi permettre aux exploitants d'augmenter leurs rendements.
+
+Dans cet article, nous alors voir les sujets suivants
+
+* Des racines à votre smartphone
+    * Des mesures au plus proche des racines
+    * Un outil, des bénéfices
+* Présentation du projet SmartIrrigation
+    * Plus concretemrnt
+    * Perfectionnements apportés durant l’hiver 2019
+* Expérience sur le terrain
+    * Preparation
+    * Watermark Digital Reader
+    * Evolution et analyses
 
 ## Des racines à votre smartphone
 Les stations mesurent le taux hydrique du sol à une séquence définie ainsi que la température de la terre et les conditions atmosphériques. La passerelle collecte les mesures et les transmet au serveur qui va les sauvegarder dans une base de données. Grâce à ceci, nous pouvons tirer des statistiques, traiter les données sauvegardées et les afficher sur votre portable (smartphone, laptop, etc.).
@@ -8,7 +21,6 @@ Les stations mesurent le taux hydrique du sol à une séquence définie ainsi qu
 ### Des mesures au plus proche des racines	
 ![Sondes Watermark](Assets/images/irrigation-watermark-1.png "Sondes watermark")
 
- 
 * Trois sondes tensiométriques plantées à différentes profondeurs
 * Un compteur de goutte
 * Mesure l’humidité de l’air
