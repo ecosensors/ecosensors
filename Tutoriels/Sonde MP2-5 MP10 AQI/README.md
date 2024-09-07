@@ -161,9 +161,172 @@ Sauver et quitter
 
 ### Display LCD
 Sources:
-Sourec:
 * https://learn.adafruit.com/monochrome-oled-breakouts/python-setup
 * https://github.com/adafruit/Adafruit_CircuitPython_SSD1306/blob/master/adafruit_ssd1306.py
+
+#### Installation des librairies SSD1306 et Pillow
+```
+sudo apt install python3-pip
+sudo pip3 install adafruit-circuitpython-ssd1306
+sudo apt install python3-pil
+```
+
+Editez le fichier aqi.py
+```
+sudo nano /opt/sds011/aqi-v1.py
+```
+
+ajoutez les lignes suivantes
+```
+# Import library for SSD1306
+import adafruit_ssd1306, board, busio
+# Create the I2C interface.
+i2c = busio.I2C(board.SCL, board.SDA)
+# 128x64 OLED Display
+display = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c)
+# Clear the display
+display.fill(0)
+display.show()
+# Get the LCD size
+width = display.width
+height = display.height
+```
+
+Il vous faudra vous assurez d’avoir la font font5x8.bin au même niveau que votre fichier aqi.py, si non utilisez la commande wget pour le télécharger
+
+```
+cd /opt/sds011/
+ls
+# ou
+sudo wget https://github.com/pierrot10/Raspi-sds011/blob/master/font5x8.bin
+```
+
+Commandes utiles
+```
+# Effacce l'écram
+display.fill(0)
+# Affiche
+display.show()
+# Met du texte dans le buffer éa position x=0 y=0
+display.text('ECO-SENSORS.CH', 0, 0, 1)
+# Met encore du texte dans le buffer à la position x=0, y=8
+display.text('Smart Air Quality', 0, 8, 1)
+# Affiche le texte contenu dans le buffer
+display.show()
+# On/Off l'écran
+display.poweron()
+display.poweroff()
+```
+
+### SDS011
+Source : https://towardsdatascience.com/sensing-the-air-quality-5ed5320f7a56
+
+Les mesures seront sauvegardées dans un fichier JSON. Nous allons aussi installé un petit serveur web, pour que vous puissiez lire les données depuis un navigateur
+
+#### Installation de lighttpd
+```
+sudo apt install lighttpd python-enum
+```
+
+Nous allons changer le propriétaire du dossier web
+
+```
+sudo chown -R pierrot:pierrot /var/www/html/
+# ou sudo chown -R pi:pi /var/www/html/
+```
+
+### Préparation du SDS011
+Nous allons maintenant importer la classe qui vous permettra de faire tourner votre capteur SDS011 et mesurer les particules fines
+
+```
+cd /opt/sds011/
+sudo wget https://github.com/pierrot10/Raspi-sds011/blob/master/sds011.py
+```
+
+Vous devrez encore installer cette librairie
+
+```
+sudo pip3 install python-aqi
+```
+
+**Connectez votre capteur SDS011 au port USB.**
+
+Nous devons maintenant savoir à quel port USB, le capteur est connecter. Lancer la commande suivante
+
+```
+dmesg | grep USB
+```
+
+et vous devriez voir une ligne finissant par ttyUSB0, comme cela est mon cas
+
+> ch341-uart converter now attached to ttyUSB0
+
+Une fois fait, éditez votre fichier aqi-v1.py
+
+```
+sudo nano /opt/sds011/aqi-v1.py
+```
+
+et ajoutez les lignes suivantes
+
+```
+# SDS011
+from sds011 import SDS011
+import aqi
+sensor = SDS011("/dev/ttyUSB0", use_query_mode=True)
+# JSON
+JSON_FILE = '/var/www/html/aqi.json'
+```
+
+Assurez-vous que ttyUSB0 correspond bien à ce que vous avez trouvé avec la commande ‘dmesg | grep USB’
+
+**Créez encore un fichier json**, où seront sauvez plus tard, les mesures
+
+echo [] > /var/www/html/aqi.json
+
+#### Exemple
+```
+# Recevoir les mesures
+pmt_2_5, pmt_10 = get_data()
+# Affichage
+print(time.strftime("%Y-%m-%d (%H:%M:%S)"), end='')
+print(f"    PM2.5: {pmt_2_5} µg/m3    ", end='')
+print(f"PM10: {pmt_10} µg/m3")
+print(' ')
+```
+
+### JSON
+
+Pour le sauvegarder dans votre fichier JSON vous pouvez le faire ainsi
+
+```
+import json # A ajouter en haut du fichier
+
+# get date and time
+tnow = datetime.now()
+timestamp_now = datetime.timestamp(tnow)
+
+# open stored data
+try:
+    with open(JSON_FILE) as json_data:
+    data = json.load(json_data)
+except IOError as e:
+    data = []
+    print('except')
+
+# check if length is more than 100 and delete first element
+if len(data) > 100:
+    data.pop(0)
+
+# append new values
+jsonrow = {'pm25': pmt_2_5, 'pm10': pmt_10, 'time': timestamp_now}
+data.append(jsonrow)
+
+# save it
+with open(JSON_FILE, 'w') as outfile:
+    json.dump(data, outfile)
+```
+
 
 
 
