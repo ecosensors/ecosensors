@@ -9,7 +9,7 @@ This is a not-exhaustive list of my LoRaWAN structure and board elements
 ![MPTT Regulator](https://eco-sensors.ch/wp-content/uploads/2022/04/ttig-box.jpg "MPTT Regulator")
 
 * TTIG [Read More](https://www.thethingsindustries.com/docs/gateways/thethingsindoorgateway/)
-* 3x60W second hand solar panel
+* 3x60W solar panel (Second hand)
 * MPTT Regulator (Victron MPTT 75 | 15)
 * 12V/110Ah solar battery (Victron)
 * 4G/WiFi router (netgear)
