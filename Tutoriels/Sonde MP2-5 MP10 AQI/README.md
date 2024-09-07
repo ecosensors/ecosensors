@@ -142,7 +142,7 @@ sudo apt install python3-smbus
 sudo pip3 install psutil
 ```
 
-Créez un fichier python que nous allons remplir au fur et à mesure
+Créez un fichier python que nous allons remplir au fur et à mesure. Le script complet ce trouve [ici](https://github.com/ecosensors/EcoAqi/blob/master/aqi-v1.py) .
 
 ```
 sudo mkdir -p /opt/sds011/
