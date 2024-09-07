@@ -37,7 +37,8 @@ Dans cet article, nous verrons comment
 * [Panneau solaire 6V/5W](https://www.waveshare.com/solar-panel-6v-5w.htm)
 * Batterie Li-ion 15'000mAh
 
-## Préparation du Raspberry
+## Installation
+### Préparation du Raspberry
 Commencer par télécharger la dernière version de Rasbian Buster Desktop que vous pouvez [télécharger ici](https://www.waveshare.com/solar-panel-6v-5w.htm)
 
 Téléchargez et installez la dernière version d'[Etcher](https://www.balena.io/etcher/) et créez l’image sur la carte SD
@@ -66,5 +67,77 @@ Puis connectez votre Raspberry au routeur à l’aide du câble Ethernet. Connec
 
 Si vous avez créé le dossier `/Volumes/boot/ssh` vous pouvez vous passer de votre écran.
 
-### Mise à jour
+#### Mise à jour
+
+Mettez à jour votre Raspberry et installez des packages utiles
+
+```
+sudo apt update && sudo apt upgrade
+sudo apt install vim ntpdate git
+```
+
+#### Changer le mot de passe
+```
+sudo passwd pi
+```
+
+#### Créez un nouvel utilisateur avec les privilèges sudo.
+
+Puis quittez et authentifiez-vous avec le nouvel utilisateur
+
+```
+sudo adduser pierrot 
+sudo adduser pierrot sudo
+exit 
+ssh pierrot@sds011.local
+```
+
+#### Supprimez l’utilisateur pi (optionnel)
+```
+sudo userdel -rf pi
+```
+
+#### Changez les paramètres de votre Raspberry
+```
+sudo raspi-config
+```
+
+Choisissez **2 Network Option**, puis
+* N1 Host name => Donnez/modifiez un nom à votre Raspberry (j'ai donné comme nom sds011)
+
+Choisissez **4 Localisation Option**, puis
+* I1 Change Local => adapter selon votre pays
+* I2 Change Timezone => Idem
+* I4 Change Wi-fi Country => Choisissez votre pays
+
+Choisissez **5 Interfacing Options**, et activez
+* P2 SSH
+* P3 VNC
+* P4 SPI
+* P5 I2C
+
+#### Configurez le WiFi de votre domicile
+Même si je décris comment configurer votre WiFi ici, il est préférable de la faire à la fin et de continuer l’installation avec le câble Ethernet. A vous de voir.
+
+```
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+```
+
+et ajoutez les lignes suivantes (attention aux tablatures)
+
+```
+network={
+		ssid="The_SSID_of_your_wifi"
+		psk="Your_wifi_password"
+}
+```
+
+### Python3
+
+
+
+
+
+
+
 
