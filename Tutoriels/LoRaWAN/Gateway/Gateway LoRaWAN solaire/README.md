@@ -4,7 +4,7 @@ Une passerelle LoRaWAN collecte les données envoyées par les stations dans un 
 
 ![Gateway LoRaWAN solaire](Assets/images/remorque-solaire.jpg "Gateway LoRaWAN solaire")
 
-*Gateway LoRaWAN autonome installée sur une remorque (attention, sur cette photo, il y a encore la TTOG qui a été remplacée par la TTIG qui consomme beaucoup moins de batterie (Voir plus bas))*
+*Gateway LoRaWAN autonome installée sur une remorque (attention, sur cette photo, il y a encore la passerelle TTOG qui a été remplacée par la TTIG qui consomme beaucoup moins de batterie (Voir plus bas)). Il faudrait que je remplace cette photo prichainement :) )*
 
 Comme support, j’utilise ma remorque, sur laquelle, j’ai installé l’installation solaire et la passerelle LoRaWAN.
 

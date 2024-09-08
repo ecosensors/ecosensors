@@ -37,9 +37,20 @@ C’est la passerelle que j’utilise principalement sur le terrain et j’en su
 
 ![TTIG](Assets/images/TTIG2.jpg "TTIG")
 
-Elle est actuellement fixée sur une remorque « fixe », parquée au milieu de vignes. Une batterie solaire au gel de 12V/110Ah ainsi que 3 panneaux solaire de 60W sont nécessaires pour faire fonctionner cette passerelle 24h/24h et assurer quelques jours de fonctionnement en cas de mauvais temps. Elle est totalement étanche.
+Elle est actuellement fixée sur une remorque « fixe », parquée au milieu des vignes. Une batterie solaire au gel de 12V/110Ah ainsi que 3 panneaux solaire de 60W sont nécessaires pour faire fonctionner cette passerelle 24h/24h.
+
+Pour qu'elle fonctionne, j'ai dû adapter la passerelle pourqu'on puisse connecter une antenne exertne, car cette option n'est pas prévue. encore ajouté quelque périphlrique
+
+* Un régulateur MPTT (Victron MPTT 75 | 15)
+* Un routeur 4G/WiFi (NetGear)
+* Antenne Sirio GP 868 C
+
+![TTIG](Assets/images/ttig-box.jpg "TTIG")
 
 
+Grâce a ceci, elle fonctionne 24h/24 et 365j par année, été comme hiver
+
+Pour plus d'information voir [l'aarticle "Gateway LoRaWAN solaire"]()
 
 
 
