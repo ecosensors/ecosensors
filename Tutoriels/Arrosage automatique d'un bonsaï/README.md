@@ -43,14 +43,14 @@ Ces mesures devront ensuite être envoyés sur un serveur distant, par radio com
 ### La pompe
 [La pompe](https://www.seeedstudio.com/6V-Mini-Water-Pump-p-1945.html) est alimentée séparément car elle nécessite entre 5V et 12V. J’utilise donc un [MOSFET](https://www.seeedstudio.com/Grove-MOSFET.html) qui fera office de relai. Une batterie de 6V est connectée au Vin du MOSFET et la pompe est connectée au Vout du MOSFET. Une broche du micro-contrôlleur est connectée au SIG du micro-contrôlleur. Quant elle passe au niveau HIGH, le MOSFET se ferme et la pompe s’allume et pompe l’eau qui se trouve dans le récipient pendant 3 seconde, puis le micro-controlleur passe la broche au niveau BAS, le MOSFET s’ouvre et la pompe n’est plus alimentée.
 
-* La pompe (détail)
-* Mosfet (détail)
+* La pompe ([détail](https://www.seeedstudio.com/6V-Mini-Water-Pump-p-1945.html))
+* Mosfet ([détail](https://www.seeedstudio.com/Grove-MOSFET-p-1594.html))
 
 ### Les sondes
 
-* Capteur de la température (détail)
-* Capteur d’humidité du sol par détection capacitive (détail)
-* Capteur de la luminosité (détail)
+* Capteur de la température ([détail](https://www.seeedstudio.com/Grove-Temp%26Humi%26Barometer-Sensor-%28BME280%29-p-2653.html))
+* Capteur d’humidité du sol par détection capacitive ([détail](http://www.robotshop.com/ca/en/gravity-moisture-sensor-corrosion-resistant.html))
+* Capteur de la luminosité ([détail](https://www.sparkfun.com/products/14350))
 
 Les mesures de la batterie se fait via le micro-contrôlleur
 
@@ -67,6 +67,6 @@ Les mesures de la batterie se fait via le micro-contrôlleur
 
 Toutes les 15 secondes (intervalle peut être modifié), le micro-controlleur va relever les différentes mesures grâce aux capteurs. Il envoie ces valeurs sur un serveur distant via la passerelle LoRaWAN, afin de conserver les mesures
 
-## Résultat
+## Résultats
 
 [![Résultat](Assets/images/bonzai-graphique.jpg "Résultat")](https://www.eco-sensors.ch/measures/show_node1.php)
