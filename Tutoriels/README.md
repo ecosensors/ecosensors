@@ -1,7 +1,7 @@
-Les tutoriels que je présenete, sont en réalité mes notes pour documenter mon travail au fur et à mesure que je les réalise.
+Les tutoriels que je présenete, sont en réalité la documentation mon travail au fur et à mesure que je trouve les solution pour concrétiser l'exercise, afin de pouvoir les refaire sans à rechercher les solutions.
 
-Je publie ceci sous forme de tutoriels afin de partager mon travail et pour que ceci soit utile à quelqu'un d'autre.
+Dasn tous les cas, vous devriez faire preuve d'adaptation pour le tutoriel que vous lisez, en fonction de votre environnement.
 
-Dasn tous les cas, vous devriez faire preuve d'adaptation pour le tutoriel que vous lisez, s'adapte à votre environnement.
+Il se peut que vous rencontriez des erreurs ou une meilleur façonde faire. Dans ce cas, n'hésitez pas à partager vos proposition d'amélioration.
 
-Il se peut que vous rencontriez des erreurs ou une meilleur de faire. Dans ce cas, n'hésitez pas à partager vos proposition d'amélioration.
+Je publie ceci sous forme de tutoriels afin de partager mes recherches et pour que ceci soit utile à quelqu'un d'autre.
