@@ -1,8 +1,9 @@
 # Uploader Cordova sur GooglePlay et AppleStore
 
-Cet article est uniquement *un aide mémoire* pour moi, des lignes de commande qui m'ont permis de téléverser mon application Cordova sur GooglePlay et AppleStore.
+Cet article est uniquement *un aide mémoire* pour moi. Il ne vous sera probablement pas utile :).
+Ces lignes de commande m'ont permis de téléverser mon application Cordova sur GooglePlay et AppleStore.
 
-J'ai utilisé Cordova pour faire ma première appléication pour les Smartphones. Cordova n'est pas génial même si dans mon cas, il a répondu à mon besoin. Mais je ne vais pas m'investir dans un tutoriel. Ce article est juste des notes, dans le cas où j'en aurai besoin dans un avenir...
+J'ai utilisé Cordova pour faire ma première application pour les Smartphones. Cordova n'est pas génial même si dans mon cas, il a répondu à mon besoin. Mais je ne vais pas m'investir dans un tutoriel. Ce article est juste des notes, dans le cas où j'en aurai besoin dans un avenir...
 
 Référence: https://codesundar.com/publish-cordova-apps-to-playstore/
 

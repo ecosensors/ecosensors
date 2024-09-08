@@ -100,7 +100,9 @@ Pour connecter ces deux éléments, il faudra encore une [carte](https://www.tin
 
 ![IoT LoRa HAT](Assets/images/IoT-LoRa-Gateway-HAT.png "IoT LoRa HAT")
 
-Cette solution est intéressante car il suffit de connecter cette passerelle sur un Raspberry Pi. J'ai écris deux intéressants articles pour la faire fonctionner.
+Cette solution est intéressante car il suffit de connecter cette passerelle sur un Raspberry Pi. 
+
+J'ai écris deux intéressants articles pour la faire fonctionner (Voir sous Articles).
 
 
 
