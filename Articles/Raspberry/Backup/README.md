@@ -328,7 +328,7 @@ sudo mkdir /mnt/wd
 
 Évidemment on peut appeler le répertoire comme on veut. Pour ma part j’ai préféré l’appeler ‘wd’. Vous pouvez très bien l’appeler /mnt/backup. La seule contrainte est que ce soit un sous-répertoire de /mnt.
 
-> Attention, ne donnez pas de nom avec des accents
+**Attention, ne donnez pas de nom avec des accents**
 
 On voit que lorsque vous avez taper cette commande
 
@@ -394,7 +394,9 @@ sudo mount -l |grep Rasp1_HD
 
 Vous devriez voir une ligne similaire à celle-ci, normalement tout en bas
 
-`/dev/sda3 on /mnt/wd type fuseblk (rw,nosuid,nodev,noexec,relatime,user_id=0,group_id=0,default_permissions,allow_other,blksize=4096) [Rasp1_HD`
+```
+/dev/sda3 on /mnt/wd type fuseblk (rw,nosuid,nodev,noexec,relatime,user_id=0,group_id=0,default_permissions,allow_other,blksize=4096) [Rasp1_HD
+```
 
 Vous pouvez encore tapez cette commande `ls /mnt/wd`
 
@@ -406,6 +408,109 @@ Vous pouvez éteindre l’écran et retirer les périphériques du Raspberry, sa
 
 ## Configuration de l’application de sauvegarde
 
+Bravo, vous allez maintenant préparer votre ordinateur pour faire les sauvegardes.
+
+Pour cela, nous allons utiliser [FileZilla](https://filezilla-project.org/) qui est un excellent utilitaire qui vous pemettra de
+
+* Synchroniser vos dossiers sur un emplacement distant, de manière sécurisée (SFTP/SSH)
+* Comparer le contenu du dossier local avec le dossier cible.
+
+Pour commencer, installer [FileZilla](https://filezilla-project.org/download.php?type=client) en fonction de votre OS puis ouvrez FileZilla
+
+![FileZilla1](Assets/images/filezilla1.jpg "FileZilla1")
+
+Cliquez, en haut à gauche sur les petits serveurs
+
+![FileZilla2](Assets/images/filezilla2.jpg "FileZilla1")
+
+Dans la nouvelle fenêtre, cliquez sur « New site » et donner un nom à votre configuration. Je l’ai appelé Rasp, mais vous pouvez trouver un nom plus sympa.
+
+![FileZilla3](Assets/images/filezilla3.jpg "FileZilla2")
+
+**Dans l’onglet ‘General’**
+
+Host : indiquez le nom de votre Raspberry que vous avez choisi plus haut, dans la rubrique Désactivation de l’auto login dans le champs ‘hostname’. Il doit être suivi par .local 
+
+Exemple: `smartidea.local`
+
+Protocol: Sélectionnez SFTP
+Login: Le nom d’utilisateur que vous avez créé lors de la configuration du Raspberry
+Password : Le mot de passe
+
+**Dans l’onglet ‘Advanced’**
+
+![FileZilla4](Assets/images/filezilla4.jpg "FileZilla4")
+
+**Indiquez le dossier local** (Default local directory) à sauvegarder sur le dossier distant.
+`/home/pierrot/Document`
+
+Finalement, indiquez le **dossier distant** (Default remote directory).
+`/mnt/wd/macbook-air`
 
 
+Cochez les deux options
 
+* Use synchronized browsing
+* Directory comparaison
+
+Puis cliquez sur OK
+
+Pour qu’il ne vous demande pas votre mot de passe à chaque fois, vous pouvez encore aller dans le menu
+
+**FileZille -> Settings ->Interface (sous Windows : Edit->Settings)**
+
+et sélectionnez **Save password**. Revenez dans l’onglet général et Sélectionnez le menu déroulant ‘Normal’, indiquez votre nom d’utilisateur et mot de passe et cliquez OK
+
+Cliquez à nouveau, « les petits serveurs », en haut à gauche, sélectionnez votre nouveau Site et cliquez sur **Connect**
+
+Il se peut que cette fenêtre apparaisse
+
+![FileZilla4-1](Assets/images/filezilla4-1.jpg "FileZilla4-1")
+
+Cliquez OK
+
+## Comment utiliser FileZilla
+
+Une fois connecté (cliquez sur les petits serveurs, en haut à gauche), vous allez voir le contenu de votre dossier source et le contenu de votre dossier cible, qui devrait être vide.
+
+Le contenu de gauche devrait être jaune. Je vais transférer, pour commencer le dossier ‘Arduino’ qui se trouve dans Mes Documents.
+
+* Je sélectionne le dossier en question
+* Je clique droit sur ce dossier et je clique sur « envoyer »
+
+Au-dessus de ces deux fenêtres, vous allez voir l’activité du transfère.
+
+NB: Je suis passé sur mon PC Lenovo pour la suite et la fin de ce tuto. FireZilla est en français. Je vous laisse donc sortir vos dicos, si  votre FileZilla est dans une autre langue
+
+A gauche, le dossier ‘Arduino’ devient blanc, et droite, le dossier ‘Arduino’ est vert. J’aurais enfin fait la sauvegarde du dossier le plus important de mon PC  (rire).
+
+Je vais répéter l’opération sur mon dossier ‘teste’. Une fois fait, mon dossier de gauche devient blanc, et mon dossier de droite est vert.
+
+Je vais ajouté un fichier coucou.txt dans le dossier ‘teste’ (sur mon PC). Puis ensuite, j’appuie sur la touche F5, pour actualiser mes vues (ou dans le menu Affichage -> Actualiser).
+
+Le dossier ‘teste’ de gauche devient vert, et le dossier ‘teste’ devient blanc. Vous pouvez aussi double cliquer sur le dossier de gauche et constater que le nouveau fichier est en jaune et qu’il ne figure pas dans la vue de droite.
+
+Sélectionner le dossier ‘teste’ (à gauche), cliquez droit, puis sur envoyer.
+
+La une nouvelle fenêtre s’affichera vous proposant divers options. Je vous laisse étudier ces options mais j’attire votre attention sur les deux premières
+
+* Remplacer
+* Remplacer si la source est plus récente
+
+Dans le premier cas, vous allez écraser tout ce que contient la cible du dossier sélectionné, ce qui peut prendre du temps si votre dossier est gros.
+
+La deuxième option est très intéressante, particulièrement si votre dossier et sous-dossiers contiennent de grosses données. Il va uniquement transférer les fichiers modifiés. Ce qui va évidemment prendre un temps beaucoup plus court.
+
+Résumé des couleurs:
+
+Jaune : Le fichier existe uniquement que d’un côté
+Vert : Le fichier est plus récent que le côté non marqué
+Rouge: Les tailles des fichiers sont différents
+
+## Conclusion
+
+Je pense que cette procédure demande une connaissance avec les lignes de commandes et Linux et que novice risque de vite se perdre. Mais avant tout, qu’il vous a été utile ou du moins, qu’il vous permis répondre à besoin, même partiel.
+
+Je reste à l’écoute des suggestions pour le perfectionner ou corriger une erreur.
+
+Est-ce que c’était vraiment compliqué?
