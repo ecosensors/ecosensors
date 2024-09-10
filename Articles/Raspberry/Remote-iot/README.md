@@ -1,6 +1,6 @@
 # Comment accéder à mon Raspberry depuis n’importe où?
 
-Dans ce petit article, vous apprendrez à configurer votre Raspberry avec [Remote-iot](https://remote-iot.com/) pour lancer des batch ou des scripts à distance.
+Dans ce petit article vite fait :), vous apprendrez à configurer votre Raspberry avec [Remote-iot](https://remote-iot.com/) pour lancer des batch ou des scripts à distance.
 
 ![Remote-iot](Assets/images/remote-iot.jpg "Remote-iot")
 
