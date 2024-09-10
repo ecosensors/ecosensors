@@ -4,12 +4,14 @@
 
 ![Joystick](Assets/images/joystick_sender.jpg "Joystick")
 
-Dans cet article, je vais vous résumer comment préparer un Joystick et un mini display pour orienter un petit robot avec la technologie LoRa. Même, si je vous donnerai tout mon code, cet exercice n’a qu’un but expérimentale sur les modules et fonctionnalités proposé. L’acquis sera reporté sur un autre projet. Les suggestions d’experts sont les bienvenues pour améliorer le mode de fonctionnement.
+Dans cet article, je vais vous *résumer* comment préparer un Joystick et un mini display pour orienter un petit robot avec la technologie LoRa. Même, si je vous donnerai tout mon code, cet exercice n’a qu’un but expérimentale sur les modules et fonctionnalités proposé. L’acquis sera reporté sur un autre projet. Les suggestions d’experts sont les bienvenues pour améliorer le mode de fonctionnement.
 
 Cet article part du principe que vous connaissez l’[IDE Arduino](https://www.arduino.cc/en/Main/Software) , C++ et comment installer des librairies
 
 
-> Attention: Les fonctions `Si.sprintln(F("coucou")`, ou `Si.sprint(F("coucou")` peuvent être remplacées par `Serial.println(F("coucou"))` ou `Serial.print(F("coucou"))`
+Le script complet sera présenté [ici](sender.ino)
+
+Cet article ne vous permettra pas de mettre en place ce Joystick sans réflexion, sans chercher à comprendre et sans analyses. De tout évidence, il vous faudra analyser [le code en entier](sender.ino) ainsi que les diverses variables que je n’ai pas publié dans cet article.
 
 
 ## Matériel
@@ -113,4 +115,89 @@ pinMode(JX, INPUT_PULLUP);
 pinMode(JY, INPUT_PULLUP);
 pinMode(JS, INPUT_PULLUP);
 ```
+
+Toujours dans la fonction `setup()`, il vous faudra encore initier votre Joystick comme [ceci](sender.ino#L143)
+
+Ensuite dans la boucle loop(),  vous devez ajouter [ce code](sender.ino#L263) qui va définit la position du Joystick et envoyer son état au module (Reciever) qui va recevoir le paquet LoRa, et orienter son objet en fonction de la position du Joystick.
+
+## La radio LoRa
+
+Pour cela, vous aurez besoin d’inclure a librairie [RadioHead](https://github.com/adafruit/RadioHead/archive/master.zip) et de déclarer les pin en fonction du schéma, ci-dessus
+
+```
+#include <RH_RF95.h> // LoRa Radio
+
+// Define pin for feather m0
+#define RFM95_CS 5
+#define RFM95_RST 6
+#define RFM95_INT 10
+```
+
+Vous devez encore créer un objet
+
+```
+RH_RF95 rf95(RFM95_CS, RFM95_INT)
+```
+
+Puis dans votre fonction `setup()`, vous initialisez le module Radio et vous affichez un message sur votre écran LCD.
+
+```
+/*
+* Init LoRa / Radio
+*/
+pinMode(RFM95_RST, OUTPUT);
+digitalWrite(RFM95_RST, HIGH);
+while (!rf95.init()) {
+ Serial.pprintln(F("LoRa radio init failed"),2);
+ display.print("LoRa radio init failed");
+ display.display();
+ //display.clearDisplay();
+while (1);
+}
+
+Serial.println(F("LoRa radio init OK!"),2);
+//display.setCursor(0,0);
+display.print("Radio ready"); // Prepare text to be pinted on LCD
+// Defaults after init are 434.0MHz, modulation GFSK_Rb250Fd250, +13dbM
+// We need 868.0Mhz for Europe
+if (!rf95.setFrequency(RF95_FREQ))
+{
+  Serial.println(F("setFrequency failed"),2);
+  while (1);
+}
+
+Serial.print(F("Freq at "),2); Serial.println(RF95_FREQ,2);
+display.print(" "); // Prepare text to be pinted on LCD
+display.print(RF95_FREQ); // Prepare text to be pinted on LCD
+display.println("Mhz"); // Prepare text to be pinted on LCD
+display.display(); // Dipslay on lCD
+display.clearDisplay(); // Clear cache
+delay(2000); // Wait 2sec
+```
+
+Vous enverrez vous données au module distant (reciever) grâce à ce code
+
+```
+memset(srfm,'\0',SRFMLEN); // Clean the buffer srfm
+sprintf(srfm,"snap"); // Copy into srfm
+r = send_rf95(srfm); // Send the vlaue of srfm
+
+if(r == 1)
+{
+  display.println(SENT); // Prepare the text to be displayed
+}
+else if(r == 0)
+{
+  display.println(NOLISTNER);
+}
+else if(r == -1)
+{
+  display.println(FAILED);
+}
+
+display.display();
+display.clearDisplay();
+```
+
+
 
