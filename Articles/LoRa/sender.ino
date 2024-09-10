@@ -1,6 +1,5 @@
 /*
-* That script has been written and tested in december 2017.
-* The script has not been reviewed since.
+* That script has been written and tested in december 2017. The script has not been reviewed since.
 */
 
 #include <Keyboard.h>               // Need only to get the standard values of keyboard keys.
