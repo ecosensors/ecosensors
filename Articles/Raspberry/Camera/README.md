@@ -135,7 +135,7 @@ N’oubliez pas le / avant le dernier " , si non le fichier sera sauvé en tant 
 
 cd vous place dans votre dossier personnel (/home/nom_d_utilisateur). La deuxième commande va créer un fichier vide avec le nom coucou.txt. Finalement, la dernière commande va l’envoyer dans votre dossier cam_smartidea1.
 
-Et ça marche!! Mon ordinateur a faire un petit bruit m’indiquant une mise à jour de DropBox. En effet, un nouveau dossier /App/cam_smartidea1/ s’est créé avec un fichier (développement suit)
+Et ça marche!! Mon ordinateur a faire un petit bruit m’indiquant une mise à jour de DropBox. En effet, un nouveau dossier `/App/cam_smartidea1/` s’est créé avec un fichier (développement suit)
 
 ## Préparatifs et installation de Motion
 
