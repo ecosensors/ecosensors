@@ -1,6 +1,6 @@
 # Autres articles
 
-Les artiles suivants traîtent également LoRaWAN 
+Les articles suivants traîtent également LoRaWAN 
 
 * [Arrosage automatique d'un bonsaï](https://github.com/ecosensors/ecosensors/tree/main/Articles/Arduino/Arrosage%20d'un%20bonsa%C3%AF)
 
