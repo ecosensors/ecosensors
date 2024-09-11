@@ -2,7 +2,7 @@
 
 *Publié le 28 novemvre 2017*
 
-*Keyword: Raspberry Zero, Camera IR, Dropbox, Api, Motion, daemon, systemctl*
+*Keywords: Raspberry Zero, Camera IR, Dropbox, Api, Motion, daemon, systemctl*
 
 ![Camera Motion](Assets/images/cam-zero.jpg "Camera Motion")
 
