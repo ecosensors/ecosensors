@@ -12,7 +12,7 @@
 */
 #define PIR_PIN 12 // Pin definition for the signal
 #define LED 13 // Pin definition for the LED
-//#define CAMERA_MOTION // To activate or not the Camera detection
+//#define CAMERA_MOTION // To activate or not the Camera detection instead of the PIR
 
 /*
 * SD
