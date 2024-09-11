@@ -1,4 +1,4 @@
-Je présente [des articles](https://github.com/ecosensors/ecosensors/tree/main/Articles) sur Arduino, LoRa, Raspberry et différents [projets](https://github.com/ecosensors/ecosensors/tree/main/Projets) LoRaWAN (IoT) que j'ai réalisé ces dernières années, notamment pour lutter contre le gel de printemps ou pour surveiller la teneur en eau dans le sol des cultures. Mais vous trouverez encore:
+Je présente [des articles](https://github.com/ecosensors/ecosensors/tree/main/Articles) (tutoriels) sur Arduino, LoRa, Raspberry et différents [projets](https://github.com/ecosensors/ecosensors/tree/main/Projets) LoRaWAN (IoT) que j'ai réalisé ces dernières années, notamment pour lutter contre le gel de printemps ou pour surveiller la teneur en eau dans le sol des cultures. Mais vous trouverez encore:
 
 * Des exemples de scripts pour Arduino (**The repositories and examples of codes are written in english**)
 * Mon propre micro-contrôleur EcoBoard basé sur un processeur ATSAMD21G, le même utilisé par l’Arduino Zero
