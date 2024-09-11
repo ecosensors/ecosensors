@@ -30,7 +30,7 @@ setup(){
  		// don't do anything more:
  		while(1); // Do not continue
 	} 
- 
+
 	if (cam.begin()){ // Try to locate the camera
 		Serial.println(F("Camera Found:"),0);
 	} 
@@ -93,41 +93,41 @@ setup(){
 
 void loop(){
 	// Use the MOTION of the camera
-	#ifdef CAMERA_MOTION // IF camera is set to act as MOTION (NO PIR detector)
- 		if (cam.motionDetected()) // If the camera detect a motion
+	#ifdef CAMERA_MOTION					// IF camera is set to act as MOTION (NO PIR detector)
+ 		if (cam.motionDetected())			// If the camera detect a motion
  		{
  			Serial.println("Motion!"); 
- 			cam.setMotionDetect(false); // Turn off the functionnality
- 			snap(); // Take a picture and save it
+ 			cam.setMotionDetect(false);		// Turn off the functionnality
+ 			snap();							// Take a picture and save it
  			cam.resumeVideo();
- 			cam.setMotionDetect(true); // Turn on the functionnality
+ 			cam.setMotionDetect(true);		// Turn on the functionnality
  		}
  	// Use the PIR sensor
  	#else
- 		if(isPIRMotionDetected()==true) // Call the function isPIRMotionDetected which will
- 		{ 								// will return true if the PIR sensor detect a movement
+ 		if(isPIRMotionDetected()==true)		// Call the function isPIRMotionDetected which will
+ 		{ 									// will return true if the PIR sensor detect a movement
  			Serial.println("PIR!"); 
- 			snap(); // take a picture and save it
+ 			snap();							// take a picture and save it
  		}
  	#endif
 }
 
 boolean isPIRMotionDetected()
 {
-	int sensorValue = digitalRead(PIR_PIN); // Read if PIR_PIN is HIGH or LOW
+	int sensorValue = digitalRead(PIR_PIN);	// Read if PIR_PIN is HIGH or LOW
 	//Serial.print("SensorValue:"); Serial.println(sensorValue);
  
- 	if(sensorValue == HIGH) // if the sensor value is HIGH?
+ 	if(sensorValue == HIGH) 				// if the sensor value is HIGH?
  	{
  		Serial.println(F("\r\nMotition detected!!"),0);
  		digitalWrite(PIR_LED,HIGH);
  		delay(500);
  		digitalWrite(PIR_LED,LOW);
- 		return true; // yes,return true
+ 		return true;						// yes,return true
  	}
  	else
  	{
- 		return false; // no,return false
+ 		return false;						// no,return false
  	}
 }
 
@@ -155,37 +155,35 @@ void snap()
  			break;
  		}
  	}
- 
- 	File imgFile = SD.open(filename, FILE_WRITE); 	// Open the created file for writing 
+
+ 	File imgFile = SD.open(filename, FILE_WRITE);	// Open the created file for writing 
  	uint16_t jpglen = cam.frameLength(); 			// Get the size of the image (frame) taken 
 	Serial.print(F("Storing "),0);
  	Serial.print(jpglen, DEC,0);
  	Serial.print(F(" byte image in "),0);
  	Serial.println(filename,0);
- 
- 	int32_t time = millis(); 						// Init the time for save the image
- 
+
+ 	int32_t time = millis();						// Init the time for save the image
  	byte wCount = 0; 								// Read all the data up to # bytes!
- 	while (jpglen > 0) 								// For counting # of writes
+ 	while (jpglen > 0)								// For counting # of writes
  	{ 
  		uint8_t *buffer;
- 		uint8_t bytesToRead = min(64 , jpglen); 	// change 32 to 64 for a speedup but may not work with all setups!
+ 		uint8_t bytesToRead = min(64 , jpglen);		// change 32 to 64 for a speedup but may not work with all setups!
  		buffer = cam.readPicture(bytesToRead);
  		imgFile.write(buffer, bytesToRead);
- 
- 													// Every 2K, give a little feedback so it doesn't appear locked up
- 		if(++wCount >= 64)
+
+ 		if(++wCount >= 64)							// Every 2K, give a little feedback so it doesn't appear locked up
  		{
  			Serial.print(F("."),0);
  			wCount = 0;
  		}
- 
+
  		//Serial.print("Read "); Serial.print(bytesToRead, DEC); Serial.println(" bytes");
  		jpglen -= bytesToRead;
  	}
- 	
- 	imgFile.close(); // Close the file
 
+ 	imgFile.close();								// Close the file
+ 	
 	time = millis() - time; 						// Print the elasped time while saving the image
  	Serial.println(F("\r\ndone!"),0);
  	Serial.print(time); Si.sprintln(F(" ms elapsed"),0);
