@@ -1,3 +1,8 @@
+/*
+* That script has been written in dec. 2017. It has not been reviewed since.
+*/
+
+
 #include <Adafruit_VC0706.h> // https://github.com/adafruit/Adafruit-VC0706-Serial-Camera-Library
 #include <SPI.h>
 #include <SD.h>
