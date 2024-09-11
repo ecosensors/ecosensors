@@ -489,13 +489,12 @@ void snap()
  	while (jpglen > 0) 								// For counting # of writes
  	{ 
  		uint8_t *buffer;
- 		uint8_t bytesToRead = min(64 , jpglen); 	// change 32 to 64 for a speedup but may not work
- 													//	with all setups!
+ 		uint8_t bytesToRead = min(64 , jpglen); 	// change 32 to 64 for a speedup but may not work with all setups!
  		buffer = cam.readPicture(bytesToRead);
  		imgFile.write(buffer, bytesToRead);
  
- 													// Every 2K, give a little feedback so it doesn't
- 		if(++wCount >= 64) 							// appear locked up
+ 													// Every 2K, give a little feedback so it doesn't appear locked up
+ 		if(++wCount >= 64)
  		{
  			Serial.print(F("."),0);
  			wCount = 0;
