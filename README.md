@@ -9,5 +9,3 @@ Je présente [des articles](https://github.com/ecosensors/ecosensors/tree/main/A
 * Une station LoRaWAN pour surveiller la poluttion
 * Une station météo LoRaWAN dans un abri Stevensom
 * la liste de mon matériel
-
-Site web: [EcoSensors](https://www.eco-sensors.ch)
