@@ -183,7 +183,6 @@ void snap()
  	}
 
  	imgFile.close();								// Close the file
- 	
 	time = millis() - time; 						// Print the elasped time while saving the image
  	Serial.println(F("\r\ndone!"),0);
  	Serial.print(time); Si.sprintln(F(" ms elapsed"),0);
