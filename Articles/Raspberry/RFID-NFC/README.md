@@ -10,7 +10,7 @@ Dans cet article, je vais vous résumer comment configurer un Raspberry Zero W p
 
 Vous avez déjà installer l'OS de votre Raspberry et il est prêt à l'usage. J'ai écris des articles pour installer l'OS d'un Raspberry dans le dossier `Raspberry`
 
-*Référence: https://hallard.me/adafruit-oled-display-driver-for-pi/ , https://learn.adafruit.com/adafruit-nfc-rfid-on-raspberry-pi/building-libnfc*
+*Références: https://hallard.me/adafruit-oled-display-driver-for-pi/ , https://learn.adafruit.com/adafruit-nfc-rfid-on-raspberry-pi/building-libnfc*
 
 ## Matériel
 
