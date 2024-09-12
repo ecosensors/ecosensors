@@ -22,9 +22,9 @@ Vous avez déjà installer l'OS de votre Raspberry et il est prêt à l'usage. J
 
 
 ## Assemblage
-**Référence: https://learn.adafruit.com/monochrome-oled-breakouts/wiring-1-dot-3-128×64#using-with-i2c**
+*Référence: https://learn.adafruit.com/monochrome-oled-breakouts/wiring-1-dot-3-128×64#using-with-i2c*
 
-**Lisez et vérifiez bien ceci https://learn.adafruit.com/monochrome-oled-breakouts/wiring-1-dot-3-128×64#using-with-i2c en fonction de votre carte OLED LCD**
+Lisez et vérifiez bien ceci https://learn.adafruit.com/monochrome-oled-breakouts/wiring-1-dot-3-128×64#using-with-i2c en fonction de votre carte OLED LCD*
 
 
 ![Assemblage](Assets/images/wiring-led-128x32-1.jpg "Assemblage")
