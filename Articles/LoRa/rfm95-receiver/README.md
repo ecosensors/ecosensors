@@ -314,47 +314,65 @@ De mon côté, ca marche!
 
 Pour afficher les packets reçus, il vous faut aller ajouter ces fonctions sous cette condition `if (rf95.available()) {}`
 
-et ajouter les lignes suivantes dans la condition `if (rf95.recv(buf, &len)){}`
+et ajouter les lignes qui se trouvent entre `/* OLED */` et `/* END OLED */` dans la condition `if (rf95.recv(buf, &len)){}`, comme ci-dessous:
 
 ```
-if (rf95.recv(buf, &len)){
-	printf("Packet[%02d] #%d => #%d %ddB: ", len, from, to, rssi);
-	printbuffer(buf, len);
+if (rf95.available()) {
+	#ifdef RF_LED_PIN
+          led_blink = millis();
+          digitalWrite(RF_LED_PIN, HIGH);
+	#endif
+    
+    // Should be a message for us now
+    uint8_t buf[RH_RF95_MAX_MESSAGE_LEN];
+    uint8_t len  = sizeof(buf);
+    uint8_t from = rf95.headerFrom();
+    uint8_t to   = rf95.headerTo();
+    uint8_t id   = rf95.headerId();
+    uint8_t flags= rf95.headerFlags();;
+    int8_t rssi  = rf95.lastRssi();
 
-	/* OLED */
-	display.clearDisplay();
-	display.setTextColor(BLACK, WHITE); // 'inverted' text
-	display.setCursor(0,0);
-	display.print(" Listing ");
-	display.setTextColor(WHITE, BLACK); // 'inverted' text
-	display.print("Packet[");
+	if (rf95.recv(buf, &len)){
+		printf("Packet[%02d] #%d => #%d %ddB: ", len, from, to, rssi);
+		printbuffer(buf, len);
 
-	snprintf(buf_print,bufprintsize,"%d",len);
-	display.print(buf_print);
-	display.print("]\n");
-	display.print("#");
+		/* OLED */
+		display.clearDisplay();
+		display.setTextColor(BLACK, WHITE); // 'inverted' text
+		display.setCursor(0,0);
+		display.print(" Listing ");
+		display.setTextColor(WHITE, BLACK); // 'inverted' text
+		display.print("Packet[");
 
-	snprintf(buf_print,bufprintsize,"%d",from);
-	display.print(buf_print);
-	display.print(" => ");
+		snprintf(buf_print,bufprintsize,"%d",len);
+		display.print(buf_print);
+		display.print("]\n");
+		display.print("#");
 
-	snprintf(buf_print,bufprintsize,"%d",to);
-	display.print(buf_print);
-	display.print("\n");
-	display.print("rssi:");
+		snprintf(buf_print,bufprintsize,"%d",from);
+		display.print(buf_print);
+		display.print(" => ");
 
-	snprintf(buf_print,bufprintsize,"%d",rssi);
-	display.print(buf_print);
-	display.print("\n\n");
+		snprintf(buf_print,bufprintsize,"%d",to);
+		display.print(buf_print);
+		display.print("\n");
+		display.print("rssi:");
 
-	snprintf(buf_print,bufprintsize,"%s",buf);
-	display.print(buf_print);
-	display.print("\n");
-	display.display();
+		snprintf(buf_print,bufprintsize,"%d",rssi);
+		display.print(buf_print);
+		display.print("\n\n");
+
+		snprintf(buf_print,bufprintsize,"%s",buf);
+		display.print(buf_print);
+		display.print("\n");
+		display.display();
+		/* END OLED */
 
 
-}else{
-	Serial.print("receive failed");
+	}else{
+		Serial.print("receive failed");
+	}
+	printf("\n");
 }
 ```
 
