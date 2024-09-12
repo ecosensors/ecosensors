@@ -12,6 +12,8 @@ Vous avez déjà installer l'OS de votre Raspberry et il est prêt à l'usage. J
 
 *Références: https://hallard.me/adafruit-oled-display-driver-for-pi/ , https://learn.adafruit.com/adafruit-nfc-rfid-on-raspberry-pi/building-libnfc*
 
+Cet article doit être revu et complété.
+
 ## Matériel
 
 * [Raspberry Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)
