@@ -199,5 +199,5 @@ display.display();
 display.clearDisplay();
 ```
 
-
+[Edit 09.2024] Il faut que je regarde si j'ai encore le script du robot (receiver) que je faisais bouger avec le joystick
 
