@@ -322,15 +322,15 @@ if (rf95.available()) {
           led_blink = millis();
           digitalWrite(RF_LED_PIN, HIGH);
 	#endif
-    
-    // Should be a message for us now
-    uint8_t buf[RH_RF95_MAX_MESSAGE_LEN];
-    uint8_t len  = sizeof(buf);
-    uint8_t from = rf95.headerFrom();
-    uint8_t to   = rf95.headerTo();
-    uint8_t id   = rf95.headerId();
-    uint8_t flags= rf95.headerFlags();;
-    int8_t rssi  = rf95.lastRssi();
+
+	// Should be a message for us now
+	uint8_t buf[RH_RF95_MAX_MESSAGE_LEN];
+	uint8_t len  = sizeof(buf);
+	uint8_t from = rf95.headerFrom();
+	uint8_t to   = rf95.headerTo();
+	uint8_t id   = rf95.headerId();
+	uint8_t flags= rf95.headerFlags();;
+	int8_t rssi  = rf95.lastRssi();
 
 	if (rf95.recv(buf, &len)){
 		printf("Packet[%02d] #%d => #%d %ddB: ", len, from, to, rssi);
