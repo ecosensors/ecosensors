@@ -63,3 +63,26 @@ Ceci est un détecteur de porte intérieur. Ouvrez le couvercle et procédez exa
 
 Lors de l’installation du capteur, assurez-vous que la petite pièce se trouve proche du récepteur et non de la pile (contrairement à ce qui est représenté sur la photo).
 
+### Ampoule Aeotec LED Bulb 6 Multi-Color
+
+* Repérer la douille où vous souhaitez insérer l’ampoule
+* Éteignez l’interrupteur d’éclairage
+* Retirez l’ampoule existante
+* Insérer l’ampoule LED Bulb 6
+* Passer votre contrôleur en mode insertion, comme indiqué plus haut
+* Allumer l’interrupteur mural. La LED Bulb 6 devient jaune pendant une courte période, puis clignote en blanc, puis vert pendant 3 secondes pour indiquer qu’elle a rejoint le réseau Z-wave. Si l’ampoule clignote en blanc, puis rouge, cela indique qu’elle n’a pas réussi à rejoindre le réseau.
+
+Pour exclure l’ampoule de votre réseau Z-wave
+
+* Éteignez l’interrupteur d’éclairage
+* Allumez l’ampoule pendant 1 seconde
+* Éteignez pendant 0.5 à 2 seconde et allumez-la rapidement avant de l’éteindre.
+* Répétez trois fois cette opération
+
+```
+off->on
+off->on
+off->on
+Attendre 0.5 à 2 secondes avant de la rallumer. Éteindre très rapidement
+```
+
