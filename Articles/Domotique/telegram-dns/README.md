@@ -246,9 +246,10 @@ Puis cliquez sur Ajouter et Action
 
 ![Action Ajouter](Assets/images/jeedom-ajoutez-action.png "Action Ajouter")
 
-Cliquez sur l’icône « Sélectionner une commande »
+Cliquez sur l’icône **Sélectionner une commande**
 
 ![Commande](Assets/images/jeedom-commande.png "Commande")
+
 ![Commande](Assets/images/jeedom-scenario-telegram-command-1.png "Commande")
 
 
@@ -266,5 +267,9 @@ Remplissez ces deux champs de la manière suivante
 
 Sauvegarder votre scénario et cliquez sur « Exécuter »
 
-Prenez votre capteur de porte et lorsque vous éloignez l’aimant, vous devriez recevoir un message sur Telegram de votre Smart Phone
+Prenez votre capteur de porte et lorsque vous éloignez l’aimant, vous devriez recevoir un message sur Telegram de votre Smart Phone.
+
+## Bravo
+
+Vous avez installé, configuré Télégram sous Jeedom.
 
