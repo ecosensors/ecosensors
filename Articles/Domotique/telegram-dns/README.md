@@ -189,7 +189,82 @@ J’ai préalablement créé des objets
 		* Chambre 1
 	* Couloir
 
+### Scénario Jeedom
+
+Rendez-vous maintenant dans le menu `Outils->Scénarios` et cliquez sur **Ajouter**
+
+![Jeedom Scenario](Assets/images/jeedom-scenario.png "Jeedom scenario")
+
+remplissez les champs
+
+![Jeedom Scenario info](Assets/images/jeedom-scenario-conf.png "Jeedom scenario info")
 
 
+* Donnez un nom
+* Définissez un groupe (option)
+* Activez-le
+* Définissez un objet parent. J’ai choisi ‘jardin’ vu que c’est une porte du jardin
+* Vous pouvez définir une icône
+* Donnez un description
+* Mode du scénario => Provoqué
+* Événement => cliquez la première icône « Choisir une commande » et sélectionnez
+	* Objet => Jardin
+	* Équipement => Sélectionnez le capteur Strip Guard (que vous avez placé sous un objet)
+	* Commande => État
 
+Sauvez et cliquez sur l’onglet Scénario
+
+![Jeedom Scenario info 2](Assets/images/jeedom-scenario-scenario.png "Jeedom scenario info 2")
+
+Vous allez créer 2 scénario. Pour cela, cliquez sur **Ajouter Bloc** et choisissez `Si/Alors/Sinon`
+
+![Si/Alors/Sinon](Assets/images/jeedom-si-alors-sinon.png "Si/Alors/Sinon")
+
+Cliquez sur l’icône **Choisir une commande**
+
+![Commande](Assets/images/jeedom-commande.png "Commande")
+
+et définissiez encore l’objet, l’équipement et l’état à surveiller et validez
+
+![Etat](Assets/images/jeedom-scenario-capteur-etat.png "Etat")
+
+*Surveillance de l’état …*
+
+Dans la prochaine fenêtre, vous indiquez que vous souhaitez surveiller l’état ouvert
+
+![Ouvert](Assets/images/jeedom-scenario-capteur-etat-ouvert.png "Ouvert")
+
+*… ouvert*
+
+Sur la ligne SI, vous devriez trouver ceci. (Évidemment, les noms varions en fonction des noms que vous aurez donner à vos objets et équipements)
+
+```
+#[jardin][Module Strips Porte Sud][Etat]# == 1
+```
+
+Puis cliquez sur Ajouter et Action
+
+![Action Ajouter](Assets/images/jeedom-ajoutez-action.png "Action Ajouter")
+
+Cliquez sur l’icône « Sélectionner une commande »
+
+![Commande](Assets/images/jeedom-commande.png "Commande")
+![Commande](Assets/images/jeedom-scenario-telegram-command-1.png "Commande")
+
+
+* Sélectionnez l’objet parent que vous avez défini lors que vous avez créé l’équipement Telegram 1
+* Sélectionner l’équipement Telegram 1
+* Sélectionnez la commande et Validez.
+
+> Vous retrouverez ces informations sous le menu `Plugins->Communication->Telegram`. Le contact sous Commande a été créé quand vous avez envoyé votre premier message Telegram, avec votre Smart Phone. Je profite pour vous rappeler, qu’**il est important désactiver la création de nouveaux contacts**
+
+Une fois fait, vous allez voir deux champs « Option » ou « titre » et « Message ».
+
+Remplissez ces deux champs de la manière suivante
+
+![scenario telegram message](Assets/images/jeedom-scenario-telegram-message.png "scenario telegram message")
+
+Sauvegarder votre scénario et cliquez sur « Exécuter »
+
+Prenez votre capteur de porte et lorsque vous éloignez l’aimant, vous devriez recevoir un message sur Telegram de votre Smart Phone
 
