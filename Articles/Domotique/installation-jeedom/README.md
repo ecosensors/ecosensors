@@ -339,12 +339,7 @@ network={
 }
 ```
 
-
 ## Bravo
 
 Vous venez d’installer votre première boîte domotique, un contrôleur. Dans les articles suivants, je vais vous montrer comment inclure de appareils, comme un détecteur de porte.
 
-
-
-
-(09.2024 - En cours d'écriture)
