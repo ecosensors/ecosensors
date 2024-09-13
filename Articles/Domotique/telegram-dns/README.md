@@ -1,6 +1,6 @@
 # Installation du plugin Telegram avec Jeedom DNS
 
-*Publié le 4 décembre 2024*
+*Publié le 4 décembre 2019*
 
 ![Telegram](Assets/images/telegram.png "Telegram")
 
