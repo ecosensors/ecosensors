@@ -1,4 +1,4 @@
-# Comment Réaliser un routeur WiFi/4G sois-mêmr
+# Comment Réaliser un routeur WiFi/4G sois-même
 
 *Publié le 21 mars 2020*
 
