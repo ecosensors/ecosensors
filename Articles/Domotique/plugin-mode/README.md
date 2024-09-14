@@ -81,7 +81,7 @@ Rendez-vous dans `Outils->Scénarios`` et créez un scénario que j’ai appelé
 
 Dans l’onglet `Général` donnez/définissez au moins
 
-![Définition du scénario Contrôle des fenêtres](Assets/images/jeedom-sceenario-aurevoir.png "Définition du scénario Contrôle des fenêtres")
+![Définition du scénario Contrôle des fenêtres](Assets/images/jeedom-scenario-aurevoir.png "Définition du scénario Contrôle des fenêtres")
 
 *Définition du scénario Contrôle des fenêtres*
 
