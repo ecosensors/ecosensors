@@ -68,5 +68,5 @@ Une fois installé, suivez les instructions.
 
 *Continuer*
 
-Finalement, retourner dans votre contrôleur dans Plugins->Communication->App Mobile et scaneu le QRCode
+Finalement, retourner dans votre contrôleur dans `Plugins->Communication->App Mobile` et scaner le QR Code.
 
