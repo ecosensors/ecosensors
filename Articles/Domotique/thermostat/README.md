@@ -15,7 +15,7 @@ Vous devez avoir installé le plugin Z-wave.
 
 ## Matériel
 
-* [Fibaro The Heat Controller FGT-001](https://manuals.fibaro.com/fr/heat-controller/) | [Documentation](https://manuals.fibaro.com/content/manuals/en/FGT-001/FGT-001-EN-T-v1.3.pdf)
+* [Fibaro The Heat Controller FGT-001](https://manuals.fibaro.com/fr/heat-controller/) | [Documentation](Assets/pdf/FGT-001-EN-T-v1.3.pdf)
 * Une petite pointe (une est livrée avec le thermostat
 
 ![Aiguille](Assets/images/jeedom-fibaro-aiguille.jpg "Aiguille")
