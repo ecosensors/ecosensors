@@ -2,7 +2,7 @@
 
 *Publié le 11 juin 2020*
 
-> [Commentaire ajouté le 6.9.2024] TinyLORA n'est pas compatible avec The Things Network Slack v3. Étant donné que TTN a entièrement migré vers la version 3, cette bibliothèque n'est plus en mesure de communiquer avec TTN.
+> [Commentaire ajouté le 6.9.2024] TinyLORA n'est plus compatible avec The Things Network Slack v3. Étant donné que TTN a entièrement migré vers la version 3, cette bibliothèque n'est plus en mesure de communiquer avec TTN.
 
 ![Sonde AQI](Assets/images/aqi-station.jpg "Sonde AQI")
 
