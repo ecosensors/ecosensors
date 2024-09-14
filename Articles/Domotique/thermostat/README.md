@@ -54,4 +54,7 @@ A l’aide de chargeur Micro-USB, connectez-le et rechargez votre tête thermost
 
 ![Inclusion](Assets/images/jeedom-inclusion-securise.png "Inclusion")
 
-*choisissez le mode **non sécurisé***
+*Attention, contrairement à ce qui est montré sur l'image, choisissez le mode **non sécurisé***
+
+* Cliquez rapidement 3 fois rapide avec la pointe. La LED du thermostat commence à clignoter en blanc.
+* Une association réussi, sera signalée par le contrôleur Z.wave
