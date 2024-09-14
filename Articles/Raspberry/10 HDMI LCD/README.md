@@ -1,5 +1,7 @@
 # Ecran 10.1 HDMI LCD sur un Raspberry
 
+*Publié le 31 mars 2020*
+
 ![Ecran 10.1 HDMI LCD](Assets/images/waveshare-lcd-screen.png "Ecran 10.1 HDMI LCD")
 
 Dans cet article, je vais rapidement rédiger un aide mémoire pour utiliser un écran WAVESHARE 10.1 » HDMI à écran tactile (Capacitive Touch Screen LCD), sur un Raspberry
