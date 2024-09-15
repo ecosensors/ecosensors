@@ -13,6 +13,6 @@
 > Le 15 septembre 2024, j'ai relu cet article et j'ai constaté que l'image n'avait toujours pas été mise à jour. Cependant, j'ai lu une information que je n'avais pas vu, ou qui a été ajouté plus tard, indiquant que **[le module "Pi Supply IoT LoRa Gateway" n'est pas compatible avec un Raspberry Pi4 8G (https://github.com/ecosensors/ecosensors/tree/main/Projets/Gel%20de%20printemps/La%20bougie%20%C3%A0%20pellets/Workshop%203%20-%20Version%202)**. Il se trouve que dans le cadre de cette exercise, j'ai bien utilisé un Raspbbery Pi4.
 
 > Il serait donc intéressant de **(re)faire cette exercise avec un Raspberry Pi3** sans garantie que la passerelle fonctionnera avec The Things Stack V3.
-
-Actuellement, je ne travaille plus avec cette passerelle, mais ca serait bien que je trouve un petit moment pour clarifié ceci et refaire cet exercise avec un Pi3
+>
+>Actuellement, je ne travaille plus avec cette passerelle, mais ca serait bien que je trouve un petit moment pour clarifié ceci et refaire cet exercise avec un Pi3
 
