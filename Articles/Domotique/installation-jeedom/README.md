@@ -238,7 +238,7 @@ Rebootez le raspberry `sudo reboot`
 Ouvrez FireFox depuis votre laptop et saisissez l’adresse IP de votre Raspberry attribué par votre routeur. Dans mon cas les deux fonctionnent
 
 ```
-http://http://192.168.1.105
+http://192.168.1.105
 http://razwave1.local
 ```
 
