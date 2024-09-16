@@ -17,7 +17,7 @@ Dans cet article, nous allons voir
 ## Matériel
 
 * Raspberry Pi3 (Cet exercise a été réalisé avant le 1er décembre 2021 avec un Pi4)
-* [Pi Supply IoT LoRa Gateway HAT for Raspberry Pi](https://uk.pi-supply.com/products/iot-lora-gateway-hat-for-raspberry-pi?lang=fr) (EUR 143.50) avec l’antenne
+* [Pi Supply IoT LoRa Gateway HAT for Raspberry Pi](https://uk.pi-supply.com/products/iot-lora-gateway-hat-for-raspberry-pi?lang=fr) (EUR 143.50) avec [l’antenne](https://uk.pi-supply.com/products/ipex-ufl-coil-spring-antenna-for-rak833?_pos=6&_sid=408b3db83&_ss=r)
 * 1x SD card (min 8G)
 * 1x câble Ethernet
 * un clavier et une souris ainsi qu’un écran
@@ -43,11 +43,45 @@ Quand j'aurai le temps, je ferai cette exercise.
 
 ## Ajout d’une passerelle dans la console TTN (The Things Network)
 
-> Cette partie a été faite en 2020, soit avant que la platforme migre sur Stack V3
+> Cette partie a été faite en 2020, soit avant que la platforme TTN migre sur Stack V3
+
+Connectez-vous à [votre console TTN](https://console.cloud.thethings.network/) et allez dans votre console et cliquez sur `Gateway` puis `register a gateway`
+
+![TTN console Gateway](Assets/images/ttn-concole.gif "TTN console Gateway")
+
+*The Things Network concole – Ajour d’une passerelle (Gateway)*
+
+Suivez les indications ci-dessous
+
+![TTN console add Gateway](Assets/images/ttn-console-add-gateway.png "TTN console add Gateway")
+
+*Enregistrer une passerelle*
+
+* **Gateway :** Saisissez un ID unique **Ne cochez pas `I’m using the legagcy packet forwarder`**
+* **Description :** Saisissez une description concernant votre passerelle
+* **Frequency Plan :** Vous devez sélectionner la fréquence pour votre région. Comme nous sommes en Europe, nous sélectionnons Europe 868Mhz.
+* **Router :** Sélectionner le routeur le plus proche de votre région. Vous devriez sélectionner `ttn-router-eu` pour l’Europe.
+* **Location / Antenna placement :** Indiquez les positions GPS de votre passerelle ainsi cliquez sur Outdoor s’il est placé à l’extérieur.
+
+Enregistrer votre nouvelle passerelle puis cliquez sur `Settings`, puis sur `information`. Renseignez les champs comme indiquez dans l’image ci-dessous
+
+![TTN console Gateway Information](Assets/images/ttn-console-settings-information.png "TTN console Gateway Information")
+
+* **Brand :** Multi-channel Raspberry Pi gateway
+* **Model **:** Raspberry Pi with Pi Supply Gateway HAT
+
+Et finalement, cliquez sur `Update Gateway`
 
 
+## Assemblage
 
+Installer l’IoT LoRa Gateway HAT sur votre Raspberry de la sorte, sans oublier l’antenne. Pour l’installation, j’ai utilisé cette antenne que vous recevez normalement avec la Gateway. Ensuite, placez le dissipateur de chaleur sur la partie argentée du RAK833. **N’alimentez pas encore votre Raspberry**.
 
+[Assemblage](Assets/images/gatewayHat-assembled2-1.png "Assemblage")
 
+*Assemblage de la passerelle IoT LoRa sur Raspberry pi (868MHz/915MHz)*
 
+** N’allumer pas le Raspberry sans avoir connecter l’antenne**
+
+## Préparation du Raspberry
 
