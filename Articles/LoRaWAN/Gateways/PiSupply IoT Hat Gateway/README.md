@@ -70,7 +70,7 @@ Enregistrer votre nouvelle passerelle puis cliquez sur `Settings`, puis sur `inf
 ![TTN console Gateway Information](Assets/images/ttn-console-settings-information.png "TTN console Gateway Information")
 
 * **Brand :** Multi-channel Raspberry Pi gateway
-* **Model **:** Raspberry Pi with Pi Supply Gateway HAT
+* **Model :** Raspberry Pi with Pi Supply Gateway HAT
 
 Et finalement, cliquez sur `Update Gateway`
 
@@ -79,11 +79,11 @@ Et finalement, cliquez sur `Update Gateway`
 
 Installer l’IoT LoRa Gateway HAT sur votre Raspberry de la sorte, sans oublier l’antenne. Pour l’installation, j’ai utilisé cette antenne que vous recevez normalement avec la Gateway. Ensuite, placez le dissipateur de chaleur sur la partie argentée du RAK833. **N’alimentez pas encore votre Raspberry**.
 
-[Assemblage](Assets/images/gatewayHat-assembled2-1.png "Assemblage")
+![Assemblage](Assets/images/gatewayHat-assembled2-1.png "Assemblage")
 
 *Assemblage de la passerelle IoT LoRa sur Raspberry pi (868MHz/915MHz)*
 
-** N’allumer pas le Raspberry sans avoir connecter l’antenne**
+**N’allumer pas le Raspberry sans avoir connecter l’antenne**
 
 ## Préparation du Raspberry
 
