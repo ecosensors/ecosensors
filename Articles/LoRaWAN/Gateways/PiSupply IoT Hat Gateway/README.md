@@ -202,6 +202,8 @@ Cliquez sur le menu **Packet Fowarder Config** et recopiez la **Gateway ID** et 
 
 ![Edit config file – TTN Server](Assets/images/iot-lora-packet-fowarder.png "Edit config file – TTN Server")
 
+*Edit config file – TTN Server*
+
 puis cliquez sur **Update Configuration**.
 
 Une fois fait, cliquez sur le menu **Sytsem Controls** et redémarrez (Restart) votre passerelle
@@ -217,4 +219,32 @@ Depuis votre console TTN, vous devriez voir le statut avec un point vert « conn
 ![TTN Gateway status](Assets/images/iot-lora-ttn-verification-2048x955.png "TTN Gateway status")
 
 *TTN Gateway status*
+
+Vous pouvez aussi vérifier le trafic de votre gateway depuis l’onglet « traffic ».
+
+Sur votre page d’accueil de votre passerelle `http://iotloragateway.local`. Vous devriez aussi pouvoir voir les messages reçus.
+
+A noter que la section `Internet Connectivity` **doit être verte maintenant avec le texte All Good**, contrairement à ce qui est indiqué sur l’image. Si ce n’est pas le cas, vérifier votre connexion à internet.
+
+![IoT LoRa Gateway Status Page](Assets/images/iot-lora-welcome.png "IoT LoRa Gateway Status Page")
+
+*IoT LoRa Gateway Status Page*
+
+## Commandes utiles
+
+```
+sudo systemctl status iot-lora-gateway.service
+sudo systemctl stop iot-lora-gateway.service
+sudo systemctl start iot-lora-gateway.service
+sudo systemctl restart iot-lora-gateway.service
+journalctl -u iot-lora-gateway.service --no-pager -n 3000
+less /opt/iotloragateway/iot-lora-gateway-reset.sh
+```
+
+## Bravo
+
+Vous venez de configurer une nouvelle passerelle.
+
+## Supplément
+A venir
 
