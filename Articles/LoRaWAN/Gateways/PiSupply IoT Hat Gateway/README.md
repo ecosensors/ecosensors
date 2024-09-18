@@ -257,7 +257,7 @@ Une fois fait, connecter vos Raspberry avec un câble ethernet et démarrez-les.
 >
 > Je vous reommande de ne pas continuer la lecture de cet article et de suivre l'autre article pour réaliser une passerelle LoRaWAN dans un boîtier Waterproof.
 
-### Problèmes rencontrés et solutiomns
+### Problèmes rencontrés et solutions
 
 Il se peut qu’en démarrant les deux Pi en même temps, le Raspberry qui fait office de Gateway LoRaWAN, n’arrive pas à être vu par TTN.
 
