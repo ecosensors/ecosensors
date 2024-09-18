@@ -246,5 +246,106 @@ less /opt/iotloragateway/iot-lora-gateway-reset.sh
 Vous venez de configurer une nouvelle passerelle.
 
 ## Supplément
-A venir
 
+### Comment transmettre les données via un autre Raspberry avec un module 4G
+
+Vous devez réaliser cet article [Comment Réaliser un routeur WiFi/4G sois-même](../../Raspberry/Routeur 4G "Comment Réaliser un routeur WiFi/4G sois-même")
+
+Une fois fait, connecter vos Raspberry avec un câble ethernet et démarrez-les.
+
+> Dans un autre article, je réalise une autre passerelle LoRaWAN dans un boîtier Waterproof, avec cette passerelle LoRaWAN décrite dans cet article avec un second Raspberry équipé d'un module 4G/LTE Base HAT pour Raspberry Pi (SixFab), mais **sans RaspAp**, RaspAp n'était pas assez stable et il ne répondais pas exactement à mon besoin. Cette passerelle LoraWAN, équipée d'un autre Raspberry un module 4G/LTE Base HAT, dans un boîtier Weterproof, je l'ai utilisée plusieurs mois sur le terrain.
+>
+> Je vous reommande de ne pas continuer la lecture de cet article et de suivre l'autre article pour réaliser une passerelle LoRaWAN dans un boîtier Waterproof.
+
+### Problèmes rencontrés et solutiomns
+
+Il se peut qu’en démarrant les deux Pi en même temps, le Raspberry qui fait office de Gateway LoRaWAN, n’arrive pas à être vu par TTN.
+
+Exécutez la commande suivante
+
+```
+sudo systemctl status iot-lora-gateway.service
+```
+
+En premier temps, il devrait vous afficher ceci
+
+```
+pi@iotloragateway:~ $ sudo systemctl status iot-lora-gateway.service
+● iot-lora-gateway.service - IOT LoRa Gateway Packet Forwarder
+Loaded: loaded (/lib/systemd/system/iot-lora-gateway.service; enabled; vendor preset: enabled)
+Active: activating (start-pre) since Wed 2020-10-21 15:34:29 BST; 15s ago
+Cntrl PID: 478 (iot-lora-gatewa)
+Tasks: 2 (limit: 2065)
+CGroup: /system.slice/iot-lora-gateway.service
+├─478 /bin/bash /opt/iotloragateway/iot-lora-gateway-reset.sh
+└─481 php -f /var/www/iotloragateway/html/updatePacketfwd.php
+
+Oct 21 15:34:29 iotloragateway systemd[1]: Starting IOT LoRa Gateway Packet Forwarder...
+```
+
+Puis (ou vous pourriez lire ceci immédiatement)
+
+```
+sudo systemctl status iot-lora-gateway.service
+● iot-lora-gateway.service - IOT LoRa Gateway Packet Forwarder
+Loaded: loaded (/lib/systemd/system/iot-lora-gateway.service; enabled; vendor preset: enabled)
+Active: active (running) since Wed 2020-10-21 15:35:06 BST; 42s ago
+Process: 478 ExecStartPre=/opt/iotloragateway/iot-lora-gateway-reset.sh (code=exited, status=0/SUCCESS)
+Main PID: 620 (iot-lora-gatewa)
+Tasks: 6 (limit: 2065)
+CGroup: /system.slice/iot-lora-gateway.service
+└─620 /opt/iotloragateway/iot-lora-gateway
+
+Oct 21 15:35:39 iotloragateway iot-lora-gateway[620]: # INFO: JIT queue contains 0 beacons.
+Oct 21 15:35:39 iotloragateway iot-lora-gateway[620]: ### GPS IS DISABLED!
+Oct 21 15:35:39 iotloragateway iot-lora-gateway[620]: ### [PERFORMANCE] ###
+Oct 21 15:35:39 iotloragateway iot-lora-gateway[620]: # Upstream radio packet quality: 0.00%.
+Oct 21 15:35:39 iotloragateway iot-lora-gateway[620]: ### [ CONNECTIONS ] ###
+Oct 21 15:35:39 iotloragateway iot-lora-gateway[620]: # bridge.eu.thethings.network: Connected
+Oct 21 15:35:39 iotloragateway iot-lora-gateway[620]: # Semtech status report send.
+Oct 21 15:35:39 iotloragateway iot-lora-gateway[620]: ##### END #####
+Oct 21 15:35:39 iotloragateway iot-lora-gateway[620]: 15:35:39 INFO: [TTN] bridge.eu.thethings.network RTT 108
+Oct 21 15:35:39 iotloragateway iot-lora-gateway[620]: 15:35:39 INFO: [TTN] send status success for bridge.eu.thethings.network
+```
+
+C'est que tout est bon
+
+En revanche, si vous lisez ceci, ce qui devrait être le cas à chaque démarrage, c’est qu’il y a un problème
+
+`ERROR: [TTN] Connection to server "" failed, retry in 30 seconds`
+
+Il vous faudra redémarrer le service suivant et vérifier
+
+```
+sudo systemctl restart iot-lora-gateway.service
+sudo systemctl status iot-lora-gateway.service
+```
+
+Pour remédier à ce problème, il faudrait modifier un ligne d’un script. Voici les commentaires du support pi supply
+
+> The actual error is that the first line of the reset script runs an update script to ensure the packet forwarder is up to date. This then explains why it’s not then working after the timeout expires as this was what was confusing me as to why it didn’t then kick back into life after it expired and the connection was then there.
+>
+>I think for your application the best solution in this case would to then be to disable this command that updates on boot, it means if you change details on the TTN console you’d need to then either use the Web UI to get it to update.
+>
+>If you could comment out the line in the iot-lora-gateway-reset.sh file on line number 4 (php -f command) this should disable the script that seems to be causing issues.
+
+#### Solutions
+
+Donc pour résoudre ce problème, la meilleurs solution actuelle est d’éditer le fichier
+
+```
+sudo nano /opt/iotloragateway/iot-lora-gateway-reset.sh
+```
+
+et de commenter la ligne 4
+
+```
+#php -f /var/www/iotloragateway/html/updatePacketfwd.php
+```
+
+Il faudra encore que j’optimise ceci.
+
+### Autres solutions à tester
+
+* Lancer la commande ‘sudo systemctl restart iot-lora-gateway.service’ juste après le boot en modifiant crontab
+* Créer un script géré par crontab, qui va analyser le retour de la commande ‘journalctl -u iot-lora-gateway.service –no-pager -n 3000’ et s’il trouve ERROR: [TTN] Connection to server «  » failed , exécuter la commande ‘sudo systemctl restart iot-lora-gateway.service’
