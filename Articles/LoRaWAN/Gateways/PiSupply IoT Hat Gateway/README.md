@@ -249,7 +249,7 @@ Vous venez de configurer une nouvelle passerelle.
 
 ### Comment transmettre les données via un autre Raspberry avec un module 4G
 
-Vous devez réaliser cet article [Comment Réaliser un routeur WiFi/4G sois-même](../../Raspberry/Routeur 4G "Comment Réaliser un routeur WiFi/4G sois-même")
+Vous devez réaliser cet article [Comment Réaliser un routeur WiFi/4G sois-même](../../Raspberry/Routeur&nbsp;4G)
 
 Une fois fait, connecter vos Raspberry avec un câble ethernet et démarrez-les.
 
