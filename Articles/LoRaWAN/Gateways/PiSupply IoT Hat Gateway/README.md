@@ -2,7 +2,7 @@
 
 *Publié le 2 mars 2020*
 
-*Keywords: Pi Supp, IoT LoRa Hateway, Raspbbery, TTN*
+*Keywords: Pi Supply, IoT LoRa Hateway, Raspbbery, TTN*
 
 ![Pi Supply IoT LoRa Gateway](Assets/images/IoT-LoRa-Gateway-HAT.png "Pi Supply IoT LoRa Gateway")
 
@@ -22,7 +22,7 @@ Dans cet article, nous allons voir
 * 1x câble Ethernet
 * un clavier et une souris ainsi qu’un écran
 
-[Edit: 09.2024] Il semble que ce module n'existe plus et il a été remplacé par le [RAK2247](https://uk.pi-supply.com/products/iot-lora-gateway-hat-for-raspberry-pi?lang=fr)
+[Edit: 09.2024] Il semble que le module IoT LoRa Gateway HAT n'existe plus et il a été remplacé par le [RAK2247](https://uk.pi-supply.com/products/iot-lora-gateway-hat-for-raspberry-pi?lang=fr)
 
 ## Information importante
 
