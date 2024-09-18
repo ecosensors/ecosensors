@@ -39,3 +39,4 @@ Dans cet article, je vais prendre deux Raspberry Pi3 avec Rasbain Buster du 20-0
 
 Pour le moment, je laisserai cet article comme je l'ai écris en 2020 mais il serait intéressant de retravailler cette solution.
 
+Je précise encore que cette passerelle, telle que je la présente dans cet article, a fonctionné sur le terrain pendant plusieurs mois.
