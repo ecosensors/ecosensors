@@ -38,3 +38,4 @@ Dans cet article, je vais prendre deux Raspberry Pi3 avec Rasbain Buster du 20-0
 > Pi Supply m'a aussi suggéré d'utiliser une autre image [rak_common_for_gateway](https://github.com/RAKWireless/rak_common_for_gateway?tab=readme-ov-file) qui est [compatible avec RAK2247](https://github.com/RAKWireless/rak_common_for_gateway?tab=readme-ov-file#supported-platforms).
 
 Pour le moment, je laisserai cet article comme je l'ai écris en 2020 mais il serait intéressant de retravailler cette solution.
+
