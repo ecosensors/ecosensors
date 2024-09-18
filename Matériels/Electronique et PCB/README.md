@@ -17,7 +17,7 @@ This is a not-exhaustive list of my LoRaWAN structure and board elements
 
 ### LoRaWAN Gateway 2
 * TTOG [Read more](https://www.thethingsindustries.com/docs/gateways/thethingsoutdoor/)
-* [Glass fiber LoRa antenna]https://uk.pi-supply.com/products/rakwireless-glass-fiber-lora-gateway-antenna?_pos=4&_sid=3bbc78311&_ss=r
+* [Glass fiber LoRa antenna](https://uk.pi-supply.com/products/rakwireless-glass-fiber-lora-gateway-antenna?_pos=4&_sid=3bbc78311&_ss=r)
 
 ### LoRaWAN Gateway 3
 * Rasoberry Pi3
