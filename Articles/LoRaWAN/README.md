@@ -34,7 +34,7 @@ Dans cet exercice, j’ai utilisé la même puissance de sortie (14). Par contre
 
 ### But de cet exercice
 
-C’est ce que je vais tester: la portée théorique! Pour cela, je vais utiliser trois noeuds qui enverront les valeurs des capteurs avec des Spreading Factors (SF) différents. Ma passerelle sera autonome. J’utiliserai une batterie de poche de 15000mA pour alimenter la passerelle mais aussi un petit routeur sans fils qui assura la connexion au Cloud, grâce à sa carte SIM et le réseau GSM/GPRS.
+C’est ce que je vais tester: **la portée théorique!** Pour cela, je vais utiliser trois noeuds qui enverront les valeurs des capteurs avec des Spreading Factors (SF) différents. Ma passerelle sera autonome. J’utiliserai une batterie de poche de 15000mA pour alimenter la passerelle mais aussi un petit routeur sans fils qui assura la connexion au Cloud, grâce à sa carte SIM et le réseau GSM/GPRS.
 
 ![Une passerelle IC800a, un petite station, un routeur 4G et une batterie de 5000mA](Assets/images/quel-est-la-portee-de-lorawan-materiel.jpg "Une passerelle IC800a, un petite station, un routeur 4G et une batterie de 5000mA")
 
