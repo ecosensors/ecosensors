@@ -14,6 +14,8 @@
 
 # Quelle est la portée de LoRaWAN
 
+Cette exercise a été réalisé le 11 et 26 novembre 2017
+
 ## Petits rappels
 
 ### LoRaWAN
@@ -39,8 +41,6 @@ C’est ce que je vais tester: **la portée théorique!** Pour cela, je vais uti
 ![Une passerelle IC800a, un petite station, un routeur 4G et une batterie de 5000mA](Assets/images/quel-est-la-portee-de-lorawan-materiel.jpg "Une passerelle IC800a, un petite station, un routeur 4G et une batterie de 5000mA")
 
 *Une passerelle IC800a, un petite station, un routeur 4G et une batterie de 5000mA*
-
-Cette exercise a été réalisé le 11 et 26 novembre 2017
 
 ## Déroulement
 
