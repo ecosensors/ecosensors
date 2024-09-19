@@ -4,7 +4,7 @@
 
 ![Joystick](Assets/images/joystick_sender.jpg "Joystick")
 
-Dans cet article, je vais vous *résumer* comment préparer un Joystick et un mini display pour orienter un petit robot avec la technologie LoRa. Même, si je vous donnerai tout mon code, cet exercice n’a qu’un but expérimentale sur les modules et fonctionnalités proposé. L’acquis sera reporté sur un autre projet. Les suggestions d’experts sont les bienvenues pour améliorer le mode de fonctionnement.
+Dans cet article, je vais vous résumer comment préparer un Joystick et un mini display pour envoyer des donnée avec LoRa. Même, si je vous donnerai tout mon code, cet exercice n’a qu’un but expérimental sur les modules et fonctionnalités proposés.
 
 Cet article part du principe que vous connaissez l’[IDE Arduino](https://www.arduino.cc/en/Main/Software) , C++ et comment installer des librairies
 
