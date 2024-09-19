@@ -532,6 +532,8 @@ sudo rm /usr/src/qmi_reconnect.sh
 sudo rm /etc/systemd/system/qmi_reconnect.service
 ```
 
+> Pour ceux qui suive l'article "Gateway LoRaWAN Waterproof avec deux Raspberry Pi3", retournez maintenant sur cet article et reprennez-le.
+
 ## Configurer votre Raspberry en un WiFi hotspot
 
 Si vous avez un Raspberry avec 3G/4G&LTE Base HAT, connecté à un réseau cellulaire, vous pouvez facilement le convertir en un WiFi Hotspot avec RaspAP.

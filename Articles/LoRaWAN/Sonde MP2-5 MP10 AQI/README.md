@@ -129,8 +129,8 @@ et ajoutez les lignes suivantes (attention aux tablatures)
 
 ```
 network={
-		ssid="The_SSID_of_your_wifi"
-		psk="Your_wifi_password"
+    ssid="The_SSID_of_your_wifi"
+	psk="Your_wifi_password"
 }
 ```
 
