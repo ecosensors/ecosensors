@@ -36,10 +36,10 @@ Dans cet article, je vais prendre deux Raspberry Pi3 avec Rasbain Buster du 20-0
 > Mi-septembre 2024, j'ai relu cet article et j'ai constaté que l'image fournie par Pi Supply, n'a pas été mise à jour depuis 2019. J'ai aussi lu une information que je n'avais pas vu (ou qui a été ajouté plus tard), indiquant que **le module "Pi Supply IoT LoRa Gateway" n'est pas compatible avec un Raspberry Pi4 8G**. 
 >
 > Pi Supply m'a aussi suggéré d'utiliser une autre image [rak_common_for_gateway](https://github.com/RAKWireless/rak_common_for_gateway?tab=readme-ov-file) qui est [compatible avec RAK2247](https://github.com/RAKWireless/rak_common_for_gateway?tab=readme-ov-file#supported-platforms).
-
-Je précise encore que cette passerelle, telle que je la présente dans cet article, a fonctionné sur le terrain pendant plusieurs mois.
-
-Il faudrait que je prenne un moment pour revoir ceci et mettre à jour cet article. Pour le moment, je laisse cet article comme je l'ai écris en 2020.
+>
+> Je précise encore que cette passerelle, telle que je la présente dans cet article, a fonctionné sur le terrain pendant plusieurs mois.
+>
+> Il faudrait que je prenne un moment pour revoir ceci et mettre à jour cet article. Pour le moment, je laisse cet article comme je l'ai écris en 2020.
 
 ## Premier Raspberry / routeur 4G
 
