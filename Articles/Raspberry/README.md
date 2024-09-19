@@ -15,4 +15,5 @@
 **Domotique/Jeedom et Raspberry**
 
 * [Installation de Jeedom sur un Raspberry Pi4](https://github.com/ecosensors/ecosensors/tree/main/Articles/Domotique/installation-jeedom)
+* [Jeedom jMQTT et The Things Network TTN](https://github.com/ecosensors/ecosensors/tree/main/Articles/Domotique/jMQTT-TTN)
 
