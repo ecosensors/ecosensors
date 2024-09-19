@@ -89,7 +89,7 @@ Une forêt peut donc être aussi un obstacle suffisent pour une distance de moin
 ### Au Lac de joux
 En revanche, j'ai été agréablement surpris que s'il y a aucun obstacle, un SF7 **peut transmettre des mesures à la passerelle jusqu'à 10km!!** Une transmission avec un SF11 et 12 peut même aller au-delà des 10km alors que dans le versant plus montagneux (au niveau du village Le Lieu) ni un SF11 ou SF12 n'ont pu transmettre (points noirs "no"). J'aurais voulu aller encore plus loin mais la météo m'a pousser à revenir vers la passerelle.
 
-## Conclusion:
+## Conclusion
 
 On peut donc clairement en conclure que les obstacles, tel qu'une forêt, une colline ou des bâtiments sont à considérer. On voit bien que SF7 peut aller jusqu'à 10km alors qu'en campagne il ne dépasse pas 3km. Il faudrait encore faire d'autres exercices en variant la puissance de sortie et le facteur d'étalement (SF), dans deux configurations différentes du terrain, comme ci-dessus.
 
