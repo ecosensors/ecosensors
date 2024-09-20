@@ -50,9 +50,9 @@ Fort des nouvelles expériences acquises durant ce projet, je prends contact ave
 
 J’ai également travaillé sur un abri Stevenson ainsi qu’une bougie à pellets. Je me suis donc « improvisé » comme menuisier pour fabriquer les abris Stevenson et comme serrurier pour souder l’acier afin d’avoir une belle bougie à pellets.
 
-![Abris Stevenson](stevenson1.jpg "Abri Stevenson")
+![Abris Stevenson](z-stevenson1.jpg "Abri Stevenson")
 
-![Bougie à Pellets](bougie-a-pellers.jpg "Bougie à pellets")
+![Bougie à Pellets](z-bougie-a-pellers.jpg "Bougie à pellets")
 
 ### Technologies utilisées
 
