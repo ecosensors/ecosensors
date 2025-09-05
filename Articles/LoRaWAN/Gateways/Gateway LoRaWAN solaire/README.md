@@ -1,6 +1,6 @@
 # Gateway LoRaWAN solaire
 
-Une passerelle LoRaWAN collecte les données envoyées par les stations dans un périmètre de plusieurs kilomètres. C’est le seul élément du réseau qui a une carte GSM, pour retransmettre les données sur un serveur distant. Elle doit être alimentée par du courant du secteur. Mais on ne trouve pas des prises électrique dans la nature, c’est pourquoi, j’ai du mettre en place une alimentation solaire.
+Une passerelle LoRaWAN collecte les données envoyées par les stations dans un périmètre de plusieurs kilomètres. C’est le seul élément du réseau qui a une carte GSM, pour retransmettre les données sur un serveur distant. Elle doit être alimentée par du courant du secteur. Mais on ne trouve pas des prises électriques dans la nature, c’est pourquoi, j’ai dû mettre en place une alimentation solaire.
 
 ![Gateway LoRaWAN solaire](Assets/images/remorque-solaire.jpg "Gateway LoRaWAN solaire")
 
