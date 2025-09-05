@@ -36,7 +36,7 @@ Augmentation du rendement.
 * [La bougie à pellets pour réchauffer les bourgeons lors du gel de printemps](https://eco-sensors.ch/la-bougie-a-pellet/)
 * [La bougie à pellets – Version 2](https://eco-sensors.ch/la-bougie-a-pellet/la-bougie-a-pellet-v2/)
 
-## On en parler
+## On en parle
 * [Dossier: Les capteurs Smart Bud, comment ça marche ](https://www.revuevitiarbohorti.ch/archives/?id_heft=134&jahr_heft=2022){:target="_blank"}, Vignes et Bergers, No 1 (janvier 2022) 
 * [Les arbres fruitiers en danger en raison du gel et de la neige dès lundi](https://www.lematin.ch/story/les-arbres-fruitiers-en-danger-en-raison-du-gel-et-de-la-neige-des-lundi-210628593769), Le Matin (4.4.2021) 
 * Coup de projecteur sur Rouge FM Rouge FM, Rouge FM (18.23.2021)
