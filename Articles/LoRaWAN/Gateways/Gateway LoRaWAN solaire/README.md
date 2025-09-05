@@ -1,10 +1,10 @@
 # Gateway LoRaWAN solaire
 
-Une passerelle LoRaWAN collecte les données envoyées par les stations dans un périmètre de plusieurs kilomètres. C’est le seul élément du réseau qui a une carte GSM, pour retransmettre les données sur un serveur distant. Elle doit être alimentée par du courant du secteur. Mais on ne trouve pas des prises électriques dans la nature, c’est pourquoi, j’ai dû mettre en place une alimentation solaire.
+Une passerelle LoRaWAN collecte les données envoyées par les stations dans un périmètre de plusieurs kilomètres. C’est le seul élément du réseau qui possède une carte GSM, pour retransmettre les données sur un serveur distant. Elle doit être alimentée par du courant du secteur. Mais on ne trouve pas des prises électriques dans la nature, c’est pourquoi, j’ai dû mettre en place une alimentation solaire.
 
 ![Gateway LoRaWAN solaire](Assets/images/remorque-solaire.jpg "Gateway LoRaWAN solaire")
 
-*Gateway LoRaWAN autonome installée sur une remorque (Attention, sur cette photo, il y a encore la passerelle TTOG qui a été remplacée par la TTIG beaucouip moins gourmente en énergie. Il faudrait que je remplace cette photo prichainement :) )*
+*Gateway LoRaWAN autonome installée sur une remorque (Attention, sur cette photo, il y a encore la passerelle TTOG qui a été remplacée par la TTIG beaucoup moins gourmande en énergie)*
 
 Comme support, j’utilise ma remorque, sur laquelle, j’ai installé l’installation solaire et la passerelle LoRaWAN.
 
@@ -26,7 +26,7 @@ Après plusieurs semaines de testes, j’ai finalement décidé de remplacer la 
 
 ![TTIG](Assets/images/ttig-box.jpg "TTIG")
 
-*Sur cette photo, on voit la passerelle TTIG, à gauche, le régulateur au centre et le routeur 4G à droite. La petite batterie au Li-ion n’est plus utilisée. Elle permettait d’alimenter le microcontrôleur, que l’on voit aussi sur la photo, qui surveille le niveau de tension de la batterie solaire.*
+*Sur cette photo, on voit la passerelle TTIG, à gauche, le régulateur au centre et le routeur 4G à droite. La petite batterie au Li-ion n’est plus utilisée. Elle permettait d’alimenter un microcontrôleur, qui surveillait le niveau de tension de la batterie solaire.*
 
 Mais le problème est que la TTIG n’est pas étanche, et surtout, elle n’a pas de connecteur SMA pour brancher l’antenne externe SIRO GP 868. Il m’a fallu donc adapter cette passerelle et la protéger dans un boîtier étanche, avec le régulateur et le routeur 4G. Le tout se trouve dans la remorque.
 
