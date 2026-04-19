@@ -5,7 +5,7 @@
 * 201 Crée - Nouvelle resource crée
 * 204 Pas de contenu - Succès sans rien retrouné
 
-## 3xx - Redirection
+## 30x - Redirection
 * 301 Déplacé de façon permanente
 * 302 trouvé - rediection temporaire
 * 304 Non modifié - (version en cache)
