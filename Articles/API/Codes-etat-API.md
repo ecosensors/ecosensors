@@ -1,5 +1,11 @@
 # Codes d'état d'API
 
+## 10X - Information
+* 100 Continue - La requête est en cours de traitement.
+* 101 - Le serveur accepte le changement de protocole spécifié par l'entête 
+* 102 Processing - Traitement en cours (évite que le client dépasse le temps d’attente limite). 
+* 103 Early Hints - (Expérimental) Dans l'attente de la réponse définitive, le serveur renvoie des liens que le client peut commencer à télécharger.
+
 ## 20x - Success
 * 200 OK - La requête est réussie
 * 201 Crée - Nouvelle resource crée
